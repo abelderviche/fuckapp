@@ -1,89 +1,94 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?><!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
 <head>
-	<meta charset="utf-8">
-	<title>Welcome to CodeIgniter</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width"/>
 
-	<style type="text/css">
-
-	::selection { background-color: #E13300; color: white; }
-	::-moz-selection { background-color: #E13300; color: white; }
-
-	body {
-		background-color: #fff;
-		margin: 40px;
-		font: 13px/20px normal Helvetica, Arial, sans-serif;
-		color: #4F5155;
-	}
-
-	a {
-		color: #003399;
-		background-color: transparent;
-		font-weight: normal;
-	}
-
-	h1 {
-		color: #444;
-		background-color: transparent;
-		border-bottom: 1px solid #D0D0D0;
-		font-size: 19px;
-		font-weight: normal;
-		margin: 0 0 14px 0;
-		padding: 14px 15px 10px 15px;
-	}
-
-	code {
-		font-family: Consolas, Monaco, Courier New, Courier, monospace;
-		font-size: 12px;
-		background-color: #f9f9f9;
-		border: 1px solid #D0D0D0;
-		color: #002166;
-		display: block;
-		margin: 14px 0 14px 0;
-		padding: 12px 10px 12px 10px;
-	}
-
-	#body {
-		margin: 0 15px 0 15px;
-	}
-
-	p.footer {
-		text-align: right;
-		font-size: 11px;
-		border-top: 1px solid #D0D0D0;
-		line-height: 32px;
-		padding: 0 10px 0 10px;
-		margin: 20px 0 0 0;
-	}
-
-	#container {
-		margin: 10px;
-		border: 1px solid #D0D0D0;
-		box-shadow: 0 0 8px #D0D0D0;
-	}
-	</style>
+<title>App</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/normalize.css">
+<style type="text/css">
+#results {
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: left;
+    min-height: 150px;
+  }
+ 
+  #start_button:focus{
+    outline:0;
+  }
+  </style>
 </head>
+
 <body>
+	<section id="container">
+		<header>
+			<div id="volver"> <a href=""> < </a> </div> 
+			<figure>
+				<img src="images/logo.png" alt="logo">
+			</figure>
+		</header>
+    <figure>
+      <button id="start_button" onmousedown="startButton(event)" style="background:none;">
+        <img id="start_img" src="images/mic2.png" alt="Start"></button>
+    </figure>
+    <a href=""><h1>APRETA PARA GRABAR</h1></a>
 
-<div id="container">
-	<h1>ABEL - SI REEMPLAZAS ESTA PAGINA POR EL HTML DEL INDEX VA A SER EL INDEX</h1>
+<form id="form" method="POST" action="paso2.php">
+		<!-- mensajes de la aplicacion -->
+		<div id="info" style="text-align:center; font-size:14px;font-family: 'rawengulklight', sans-serif;">
+		  <p id="info_start"></p>
+		  <p id="info_speak_now">Hablá ahora. Volvé a apretar para pasar al siguiente paso</p>
+		  <p id="info_no_speech">No se detecto ningun sonido. Talvez tengas que revisar
+		    <a href="//support.google.com/chrome/bin/answer.py?hl=en&amp;answer=1407892">
+		      las opciones del micrófono</a>.</p>
+		  <p id="info_no_microphone" style="display:none">
+		    No se encontró un micrófono. Asegurate que esté conectado o revisá que
+		    <a href="//support.google.com/chrome/bin/answer.py?hl=en&amp;answer=1407892">
+		    las opciones del micrófono</a> esten bien configuradas.</p>
+		  <p id="info_allow">Presióna en "Permitir" para habilitar el micrófono.</p>
+		  <p id="info_denied">El permiso para el micrófono fue denegado.</p>
+		  <p id="info_blocked">El permiso para el micrófono está bloqueado. para cambiar,
+		    a chrome://settings/contentExceptions#media-stream</p>
+		  <p id="info_upgrade">El reconocedor de voz no está disponible en este navegador
+		     Instalá <a href="//www.google.com/chrome">Chrome</a>
+		     version 25 o mayor.</p>
+		</div>
 
-	<div id="body">
-		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
+		<!-- texto hablado por mic * OCULTO * -->
+		<div id="results" style="display:none;">
+		  <span id="final_span" class="final"></span>
+		  <span id="interim_span" class="interim"></span>
+      <input type="text" name="texto" id="test_input" style="background:blue;" />
+		  <p>
+		</div>
+    
+		<!-- Selector de lenguaje * OCULTO * -->
+		<div id="div_language" style="display:none;">
+	    	<select id="select_language" onchange="updateCountry()"></select>
+		    &nbsp;&nbsp;
+		    <select id="select_dialect"></select>
+	 	</div>
+		
+    <input type="submit" value="SIGUIENTE" id="siguiente" class="siguiente">
+    <a href="manual.php" id="ingresar"><h2>INGRESAR MANUALMENTE</h2></a>
+ <!--   <a href="" ><h3 style="display:none;" id="next_step">SIGUIENTE</h3></a> -->
+		<div id="pasos">
+			<figure><img src="images/paso-1.png" alt=""></figure>
+		</div>
+	</section>
+</form>
 
-		<p>If you would like to edit this page you'll find it located at:</p>
-		<code>application/views/welcome_message.php</code>
-
-		<p>The corresponding controller for this page is found at:</p>
-		<code>application/controllers/Welcome.php</code>
-
-		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
-	</div>
-
-	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
-</div>
+	<footer>
+	</footer>
+<script src="js/modernizr.js" type="text/javascript"></script>
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<script src="js/recorder.js" type="text/javascript"></script>
+<script src="js/speech.js" type="text/javascript"></script>
 
 </body>
 </html>
+
