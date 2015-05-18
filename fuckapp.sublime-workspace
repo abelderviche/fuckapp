@@ -1,0 +1,750 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"codi",
+				"codigo_barras"
+			],
+			[
+				"utf",
+				"utf8_encode"
+			],
+			[
+				"cam",
+				"campania"
+			],
+			[
+				"ru",
+				"rubros"
+			],
+			[
+				"efe",
+				"efectivo_p"
+			],
+			[
+				"cre",
+				"cred_p"
+			],
+			[
+				"fecha",
+				"fecha_desde"
+			],
+			[
+				"total",
+				"total_campania"
+			],
+			[
+				"tota",
+				"total_campania"
+			],
+			[
+				"end",
+				"endforeach"
+			],
+			[
+				"prin",
+				"print_r"
+			],
+			[
+				"array_p",
+				"array_push"
+			],
+			[
+				"file",
+				"filename"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "application/views/layout/default.php",
+			"settings":
+			{
+				"buffer_size": 136,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/views/welcome_message.php",
+			"settings":
+			{
+				"buffer_size": 2551,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "application/controllers/Welcome.php",
+			"settings":
+			{
+				"buffer_size": 862,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "assets/css/style.css",
+			"settings":
+			{
+				"buffer_size": 6117,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "application/views/templates/header.php",
+			"settings":
+			{
+				"buffer_size": 662,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/views/templates/footer.php",
+			"settings":
+			{
+				"buffer_size": 622,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 160.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/opt/lampp/htdocs/fuckapp"
+	],
+	"file_history":
+	[
+		"/opt/lampp/htdocs/fuckapp/assets/js/recorder.js",
+		"/opt/lampp/htdocs/fuckapp/assets/js/recorderWorker.js",
+		"/opt/lampp/htdocs/test/paypal/algunos_pagos.php",
+		"/opt/lampp/htdocs/test/paypal/PayPal-PHP-SDK/paypal/rest-api-sdk-php/sample/payments/GetPayment.php",
+		"/opt/lampp/htdocs/test/paypal/PayPal-PHP-SDK/paypal/rest-api-sdk-php/sample/payments/ListPayments.php",
+		"/opt/lampp/htdocs/test/paypal/PayPal-PHP-SDK/paypal/rest-api-sdk-php/sample/payouts/GetPayoutItemStatus.php",
+		"/opt/lampp/htdocs/test/paypal/PayPal-PHP-SDK/paypal/rest-api-sdk-php/sample/payment-experience/ListWebProfiles.php",
+		"/opt/lampp/htdocs/test/paypal/first.php",
+		"/opt/lampp/htdocs/test/paypal/PayPal-PHP-SDK/paypal/rest-api-sdk-php/sample/bootstrap.php",
+		"/opt/lampp/htdocs/test/paypal/PayPal-PHP-SDK/paypal/rest-api-sdk-php/sample/payments/CreatePayment.php",
+		"/opt/lampp/htdocs/test/paypal/PayPal-PHP-SDK/composer/ClassLoader.php",
+		"/opt/lampp/htdocs/test/paypal/PayPal-PHP-SDK/composer/autoload_real.php",
+		"/opt/lampp/htdocs/test/paypal/PayPal-PHP-SDK/paypal/rest-api-sdk-php/lib/PayPal/Api/Payment.php",
+		"/opt/lampp/htdocs/test/paypal/PayPal-PHP-SDK/paypal/rest-api-sdk-php/tests/PayPal/Test/Constants.php",
+		"/opt/lampp/htdocs/test/paypal/PayPal-PHP-SDK/paypal/rest-api-sdk-php/tests/PayPal/Test/Rest/ApiContextTest.php",
+		"/opt/lampp/htdocs/test/paypal/PayPal-PHP-SDK/paypal/rest-api-sdk-php/tests/bootstrap.php",
+		"/opt/lampp/htdocs/test/paypal/PayPal-PHP-SDK/autoload.php",
+		"/opt/lampp/htdocs/test/paypal/PayPal-PHP-SDK/paypal/rest-api-sdk-php/sample/index.php",
+		"/opt/lampp/htdocs/test/paypal/paypal_cron.php",
+		"/opt/lampp/htdocs/test/paypal/order_confirmation.php",
+		"/opt/lampp/htdocs/test/paypal/order_completion-bk.php",
+		"/opt/lampp/htdocs/test/paypal/bootstrap.php",
+		"/opt/lampp/htdocs/test/paypal/order_place_alianza.php",
+		"/opt/lampp/htdocs/test/paypal/Payment.php",
+		"/opt/lampp/htdocs/pauta/application/views/recepcion/control_liquidaciones/pdf_comprobante_control_liquidaciones.php",
+		"/opt/lampp/htdocs/pauta/application/controllers/recepcion/control_liquidaciones.php",
+		"/opt/lampp/htdocs/test/index.php",
+		"/opt/lampp/htdocs/test/header.php",
+		"/opt/lampp/htdocs/test/cat-posts.php",
+		"/opt/lampp/htdocs/test/single.php",
+		"/opt/lampp/htdocs/test/sidebar.php",
+		"/opt/lampp/htdocs/pauta/application/controllers/recepcion/gav.php",
+		"/opt/lampp/htdocs/pauta/application/views/recepcion/gav/pdf_comprobante_gav.php",
+		"/opt/lampp/htdocs/pauta/application/controllers/recepcion/recepcion_ordenes.php",
+		"/home/patricio/Downloads/awdb2013-2015-05-15.sql",
+		"/opt/lampp/htdocs/pauta/application/controllers/historico_recepcion/h_gav.php",
+		"/home/patricio/Downloads/SQLyogTunnel.php",
+		"/opt/lampp/htdocs/pauta/application/libraries/codigo_barras.php",
+		"/opt/lampp/htdocs/pauta/application/libraries/orden.php",
+		"/opt/lampp/htdocs/pauta/application/views/recepcion/control_liquidaciones/listado_ordenes_control_liquidaciones.php",
+		"/opt/lampp/htdocs/pauta/application/views/pdf/_footer_op.php",
+		"/opt/lampp/htdocs/pauta/application/views/recepcion/listado_recepciones.php",
+		"/opt/lampp/htdocs/pauta/application/models/planificacion_model.php",
+		"/opt/lampp/htdocs/pauta/application/models/orden_model.php",
+		"/opt/lampp/htdocs/pauta/application/controllers/planificaciones.php",
+		"/opt/lampp/htdocs/pauta/application/views/historico_recepcion/control_liquidaciones/listado_ordenes_control_liquidaciones.php",
+		"/opt/lampp/htdocs/pauta/application/controllers/historico_recepcion/h_control_gap.php",
+		"/opt/lampp/htdocs/pauta/application/models/historico_recepcion/h_control_gap_model.php",
+		"/opt/lampp/htdocs/pauta/application/views/historico_recepcion/control_gap/listado_ordenes_control_gap.php",
+		"/opt/lampp/htdocs/pauta/application/config/recepcion_ordenes.php",
+		"/opt/lampp/htdocs/pauta/application/views/ordenes/listado_ordenes.php",
+		"/opt/lampp/htdocs/pauta/assets/js/main.js",
+		"/opt/lampp/htdocs/pauta/application/views/planificaciones/listado_planificaciones.php",
+		"/opt/lampp/htdocs/pauta/application/views/ordenes/listado_rectificadoras_ordenes.php",
+		"/opt/lampp/htdocs/pauta/application/controllers/ordenes.php",
+		"/opt/lampp/htdocs/mueble/localhost.sql",
+		"/opt/lampp/htdocs/pauta/application/views/facturas/listado_facturas.php",
+		"/home/patricio/mueble.sql",
+		"/opt/lampp/htdocs/mueble/databasename.sql",
+		"/home/patricio/Downloads/iron-acl-ci3-master/application/config/config.php",
+		"/home/patricio/Downloads/iron-acl-ci3-master/application/core/MY_Controller.php",
+		"/home/patricio/Downloads/iron-acl-ci3-master/application/config/acl.php",
+		"/opt/lampp/htdocs/pauta/application/views/reportes/campanias_generar_informe.php",
+		"/opt/lampp/htdocs/pauta/application/views/reportes/campanias.php",
+		"/home/patricio/Downloads/reportes.php",
+		"/opt/lampp/htdocs/pauta/application/libraries/Excel.php",
+		"/opt/lampp/htdocs/pauta/application/third_party/PHPExcel.php",
+		"/opt/lampp/htdocs/pauta/application/controllers/reportes.php",
+		"/opt/lampp/htdocs/v8/index.php",
+		"/home/patricio/Downloads/reportes.php.r2539",
+		"/home/patricio/Downloads/reportes.php.mine",
+		"/home/patricio/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/patricio/Downloads/PHPExcel-develop/Examples/01simple-download-xls.php",
+		"/home/patricio/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/opt/lampp/htdocs/pauta/application/models/factura_model.php",
+		"/opt/lampp/htdocs/pauta/application/controllers/historico_recepcion/h_mesa_de_entrada.php",
+		"/opt/lampp/htdocs/pauta/application/models/comprobante_model.php",
+		"/opt/lampp/htdocs/pauta/application/libraries/EXcel.php",
+		"/opt/lampp/htdocs/pauta/application/libraries/PHPExcel.php",
+		"/opt/lampp/htdocs/pauta/application/views/layout/default.php",
+		"/opt/lampp/htdocs/fuckapp/fuckapp_old/index.html",
+		"/opt/lampp/htdocs/fuckapp/application/views/welcome_message.php",
+		"/home/patricio/.config/sublime-text-3/Packages/User/HTML.sublime-settings"
+	],
+	"find":
+	{
+		"height": 30.0
+	},
+	"find_in_files":
+	{
+		"height": 102.0,
+		"where_history":
+		[
+			"<project>",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"function http_build_query",
+			"http_build_query",
+			"function all(",
+			"all",
+			"time_",
+			"library(\"codigo_barras\")",
+			"_generar_pdf",
+			"codigo_barra",
+			"ver_pdf_aprobacion",
+			"time_zone=null",
+			"time_zone",
+			"_generar_pdf",
+			"rege",
+			"wre",
+			"codigo_barras",
+			"RUTA_TEMPLATE_PDF_APROBACION",
+			"get_codigo_barra_orden",
+			"_get_codigo_barra_orden",
+			"function _generar_pdf",
+			"funcition _generar_pdf",
+			"_generar_pdf",
+			"_get_codigo_barra_orden",
+			"library",
+			"_get_codigo_barra_orden",
+			"codigo_barras",
+			"regenerar",
+			"wrench",
+			"pdf",
+			".js",
+			"filtro_",
+			"filtro",
+			"filtro_bus",
+			"get_filtro",
+			"_get_filtro_busqueda",
+			"filtro",
+			"filtro_bu",
+			"js-calendario-con-meses",
+			".js",
+			"filtro_bu",
+			"COLLATE=utf8mb4_unicode_ci",
+			"CHARSET=utf8mb4",
+			"COLLATE utf8mb4_unicode_ci",
+			"COLLATE utf8",
+			"utf8mb4_unicode_ci",
+			"filtro",
+			"texto_campa",
+			"get_all(",
+			"get_all",
+			"_filtros_busqueda",
+			"aFiltrosExtras",
+			"busqueda",
+			"get_filtros_bus",
+			"listar",
+			"mine",
+			"2539",
+			"mine",
+			"period",
+			"<<<",
+			"campanias",
+			"ordenes_efectivo",
+			"TIPO_ORDEN_448"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"COLLATE=utf8_unicode_ci",
+			"CHARSET=utf8",
+			"COLLATE utf8_unicode_ci",
+			"",
+			"utf8",
+			"ordenes_credito"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "application/views/layout/default.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 136,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "application/views/welcome_message.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2551,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2549,
+								2549
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 990.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "application/controllers/Welcome.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 862,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								689,
+								689
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "assets/css/style.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6117,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6117,
+								6117
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 5280.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "application/views/templates/header.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 662,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								30,
+								30
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "application/views/templates/footer.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 622,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								559,
+								559
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "fuckapp.sublime-project",
+	"replace":
+	{
+		"height": 56.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"we",
+				"application/controllers/Welcome.php"
+			],
+			[
+				"wel",
+				"application/views/welcome_message.php"
+			],
+			[
+				"foo",
+				"application/views/templates/footer.php"
+			],
+			[
+				"head",
+				"application/views/templates/header.php"
+			],
+			[
+				"defa",
+				"application/views/layout/default.php"
+			],
+			[
+				"pdf_comprobante_gav",
+				"application/views/recepcion/gav/pdf_comprobante_gav.php"
+			],
+			[
+				"pdf_comprobante_control_liquidaciones",
+				"application/views/recepcion/control_liquidaciones/pdf_comprobante_control_liquidaciones.php"
+			],
+			[
+				"control",
+				"application/controllers/recepcion/control_liquidaciones.php"
+			],
+			[
+				"recep",
+				"application/controllers/recepcion/recepcion_ordenes.php"
+			],
+			[
+				"gav",
+				"application/controllers/recepcion/gav.php"
+			],
+			[
+				"listado_ordenes_control_liquidaciones",
+				"application/views/recepcion/control_liquidaciones/listado_ordenes_control_liquidaciones.php"
+			],
+			[
+				"control_",
+				"application/controllers/recepcion/control_liquidaciones.php"
+			],
+			[
+				"listar",
+				"application/views/recepcion/listado_recepciones.php"
+			],
+			[
+				"recepcion_ordenes",
+				"application/controllers/recepcion/recepcion_ordenes.php"
+			],
+			[
+				"h_control_gap_model",
+				"application/models/historico_recepcion/h_control_gap_model.php"
+			],
+			[
+				"orden_model",
+				"application/models/orden_model.php"
+			],
+			[
+				"planifi",
+				"application/models/planificacion_model.php"
+			],
+			[
+				"listado_ordenes_control_gap",
+				"application/views/historico_recepcion/control_gap/listado_ordenes_control_gap.php"
+			],
+			[
+				"h_control",
+				"application/controllers/historico_recepcion/h_control_gap.php"
+			],
+			[
+				"ordenes",
+				"application/controllers/ordenes.php"
+			],
+			[
+				"listado_re",
+				"application/views/ordenes/listado_rectificadoras_ordenes.php"
+			],
+			[
+				"planifica",
+				"application/models/planificacion_model.php"
+			],
+			[
+				"plani",
+				"application/controllers/planificaciones.php"
+			],
+			[
+				"listado_plani",
+				"application/views/planificaciones/listado_planificaciones.php"
+			],
+			[
+				"listado_pla",
+				"application/views/planificaciones/listado_planificaciones.php"
+			],
+			[
+				"listado",
+				"application/views/facturas/listado_facturas.php"
+			],
+			[
+				"orden_",
+				"application/models/orden_model.php"
+			],
+			[
+				"listado_orde",
+				"application/views/ordenes/listado_ordenes.php"
+			],
+			[
+				"plan",
+				"application/models/planificacion_model.php"
+			],
+			[
+				"campani",
+				"application/views/reportes/campanias.php"
+			],
+			[
+				"generar",
+				"application/views/reportes/campanias_generar_informe.php"
+			],
+			[
+				"campanias_generar_informe",
+				"application/views/reportes/campanias_generar_informe.php"
+			],
+			[
+				"orden",
+				"application/models/orden_model.php"
+			],
+			[
+				"repo",
+				"application/controllers/reportes.php"
+			],
+			[
+				"factura",
+				"application/models/factura_model.php"
+			],
+			[
+				"compro",
+				"application/models/comprobante_model.php"
+			],
+			[
+				"exce",
+				"application/libraries/Excel.php"
+			],
+			[
+				"reporte",
+				"application/controllers/reportes.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"/opt/lampp/htdocs/pauta/pauta.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

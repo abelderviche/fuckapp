@@ -1,39 +1,13 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width"/>
-
-<title>App</title>
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/normalize.css">
-<style type="text/css">
-#results {
-    font-size: 14px;
-    font-weight: bold;
-    border: 1px solid #ddd;
-    padding: 15px;
-    text-align: left;
-    min-height: 150px;
-  }
- 
-  #start_button:focus{
-    outline:0;
-  }
-  </style>
-</head>
-
-<body>
 	<section id="container">
 		<header>
 			<div id="volver"> <a href=""> < </a> </div> 
 			<figure>
-				<img src="images/logo.png" alt="logo">
+				<img src="<?php echo asset_url(); ?>img/logo.png" alt="logo">
 			</figure>
 		</header>
     <figure>
       <button id="start_button" onmousedown="startButton(event)" style="background:none;">
-        <img id="start_img" src="images/mic2.png" alt="Start"></button>
+        <img id="start_img" src="<?php echo asset_url(); ?>img/mic2.png" alt="Start"></button>
     </figure>
     <a href=""><h1>APRETA PARA GRABAR</h1></a>
 
@@ -77,18 +51,9 @@
     <a href="manual.php" id="ingresar"><h2>INGRESAR MANUALMENTE</h2></a>
  <!--   <a href="" ><h3 style="display:none;" id="next_step">SIGUIENTE</h3></a> -->
 		<div id="pasos">
-			<figure><img src="images/paso-1.png" alt=""></figure>
+			<figure><img src="<?php echo asset_url(); ?>img/paso-1.png" alt=""></figure>
 		</div>
 	</section>
 </form>
 
-	<footer>
-	</footer>
-<script src="js/modernizr.js" type="text/javascript"></script>
-<script src="js/jquery.min.js" type="text/javascript"></script>
-<script src="js/recorder.js" type="text/javascript"></script>
-<script src="js/speech.js" type="text/javascript"></script>
-
-</body>
-</html>
 

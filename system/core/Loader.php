@@ -554,34 +554,27 @@ class CI_Loader {
 				continue;
 			}
 
-			// Is this a helper extension request?
-			$ext_helper = config_item('subclass_prefix').$helper;
-			$ext_loaded = FALSE;
-			foreach ($this->_ci_helper_paths as $path)
-			{
-				if (file_exists($path.'helpers/'.$ext_helper.'.php'))
-				{
-					include_once($path.'helpers/'.$ext_helper.'.php');
-					$ext_loaded = TRUE;
-				}
-			}
+			$ext_helper = APPPATH.'helpers/'.config_item('subclass_prefix').$helper.'.php';
 
-			// If we have loaded extensions - check if the base one is here
-			if ($ext_loaded === TRUE)
+			// Is this a helper extension request?
+			if (file_exists($ext_helper))
 			{
 				$base_helper = BASEPATH.'helpers/'.$helper.'.php';
+
 				if ( ! file_exists($base_helper))
 				{
 					show_error('Unable to load the requested file: helpers/'.$helper.'.php');
 				}
 
+				include_once($ext_helper);
 				include_once($base_helper);
+
 				$this->_ci_helpers[$helper] = TRUE;
-				log_message('info', 'Helper loaded: '.$helper);
+				log_message('debug', 'Helper loaded: '.$helper);
 				continue;
 			}
 
-			// No extensions found ... try loading regular helpers and/or overrides
+			// Try to load the helper
 			foreach ($this->_ci_helper_paths as $path)
 			{
 				if (file_exists($path.'helpers/'.$helper.'.php'))
@@ -589,7 +582,7 @@ class CI_Loader {
 					include_once($path.'helpers/'.$helper.'.php');
 
 					$this->_ci_helpers[$helper] = TRUE;
-					log_message('info', 'Helper loaded: '.$helper);
+					log_message('debug', 'Helper loaded: '.$helper);
 					break;
 				}
 			}
@@ -600,10 +593,7 @@ class CI_Loader {
 				show_error('Unable to load the requested file: helpers/'.$helper.'.php');
 			}
 		}
-
-		return $this;
 	}
-
 	// --------------------------------------------------------------------
 
 	/**

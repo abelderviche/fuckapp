@@ -1,5 +1,6 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+if ( ! defined('BASEPATH'))
+    exit('No direct script access allowed');
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +19,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 $config['base_url'] = '';
-
+$config['asset_path'] = 'assets/';
 /*
 |--------------------------------------------------------------------------
 | Index File
@@ -29,7 +30,7 @@ $config['base_url'] = '';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------

@@ -106,6 +106,24 @@ if ( ! function_exists('current_url'))
 		return $CI->config->site_url($CI->uri->uri_string());
 	}
 }
+// ------------------------------------------------------------------------
+/**
+ * Assets URL
+ *
+ * Crea una url local para localizar los elementos que están dentro del directorio assets
+ *
+ * @access	public
+ * @param string
+ * @return	string
+ */
+if (!function_exists('asset_url')) {
+
+    function asset_url() { 
+        $CI = & get_instance();
+        return $CI->config->base_url() . $CI->config->item('asset_path');
+    }
+
+}
 
 // ------------------------------------------------------------------------
 
