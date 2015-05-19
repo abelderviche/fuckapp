@@ -55,5 +55,7 @@
 		</div>
 	</section>
 </form>
-
+<script>
+	dominio = "<?php echo asset_url(); ?>";
+</script>
 

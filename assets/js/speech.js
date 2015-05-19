@@ -95,16 +95,16 @@ if (!('webkitSpeechRecognition' in window)) {
     showInfo('info_speak_now');
     //siguiente.style.display = 'none';
     $('#siguiente').hide(500);
-    start_img.src = 'images/mic2.gif';
+    start_img.src = '<?php echo asset_url(); ?>img/mic2.gif';
   };
   recognition.onerror = function(event) {
     if (event.error == 'no-speech') {
-      start_img.src = 'images/mic2.png';
+      start_img.src = dominio + "img/mic2.png";
       showInfo('info_no_speech');
       ignore_onend = true;
     }
     if (event.error == 'audio-capture') {
-      start_img.src = 'images/mic2.png';
+      start_img.src = dominio + "img/mic2.png";
       showInfo('info_no_microphone');
       ignore_onend = true;
     }
@@ -122,7 +122,7 @@ if (!('webkitSpeechRecognition' in window)) {
     if (ignore_onend) {
       return;
     }
-    start_img.src = 'images/mic2.png';
+    start_img.src = dominio + "img/mic2.png";
     test_input.value = final_span.innerHTML;
     if(test_input.value == ''){
       showInfo('info_no_speech');
@@ -162,7 +162,7 @@ if (!('webkitSpeechRecognition' in window)) {
       
       showButtons('inline-block');
 
-      start_img.src = 'images/mic2.gif';
+      start_img.src = '<?php echo asset_url(); ?>img/mic2.gif';
     }
   };
 }
@@ -221,7 +221,7 @@ function startButton(event) {
   ignore_onend = false;
   final_span.innerHTML = '';
   interim_span.innerHTML = '';
-  start_img.src = 'images/mic2.png';
+  start_img.src = dominio + "img/mic2.png";
   showInfo('info_allow');
   showButtons('none');
   start_timestamp = event.timeStamp;
