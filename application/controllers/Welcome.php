@@ -30,4 +30,7 @@ public function __construct()
         $dataLayout["contenido"] = $this->load->view("welcome_message",$data,TRUE);
         $this->load->view("layout/default", $dataLayout);
 	}
+	public function paso2(){
+		print_r($_POST);die;
+	}
 }
