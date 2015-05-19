@@ -11,7 +11,7 @@
     </figure>
     <a href=""><h1>APRETA PARA GRABAR</h1></a>
 
-<form id="form" method="POST" action="/paso2">
+<form id="form" method="POST" action="welcome/paso2">
 		<!-- mensajes de la aplicacion -->
 		<div id="info" style="text-align:center; font-size:14px;font-family: 'rawengulklight', sans-serif;">
 		  <p id="info_start"></p>
