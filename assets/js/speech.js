@@ -95,16 +95,16 @@ if (!('webkitSpeechRecognition' in window)) {
     showInfo('info_speak_now');
     //siguiente.style.display = 'none';
     $('#siguiente').hide(500);
-    start_img.src = 'images/mic2.gif';
+    start_img.src = 'assets/img/mic2.gif';
   };
   recognition.onerror = function(event) {
     if (event.error == 'no-speech') {
-      start_img.src = 'images/mic2.png';
+      start_img.src = 'assets/img/mic2.png';
       showInfo('info_no_speech');
       ignore_onend = true;
     }
     if (event.error == 'audio-capture') {
-      start_img.src = 'images/mic2.png';
+      start_img.src = 'assets/img/mic2.png';
       showInfo('info_no_microphone');
       ignore_onend = true;
     }
@@ -122,7 +122,7 @@ if (!('webkitSpeechRecognition' in window)) {
     if (ignore_onend) {
       return;
     }
-    start_img.src = 'images/mic2.png';
+    start_img.src = 'assets/img/mic2.png';
     test_input.value = final_span.innerHTML;
     if(test_input.value == ''){
       showInfo('info_no_speech');
@@ -162,7 +162,7 @@ if (!('webkitSpeechRecognition' in window)) {
       
       showButtons('inline-block');
 
-      start_img.src = 'images/mic2.gif';
+      start_img.src = 'assets/img/mic2.gif';
     }
   };
 }
@@ -188,27 +188,6 @@ function createEmail() {
   var body = encodeURI(final_transcript.substring(n + 1));
   window.location.href = 'mailto:?subject=' + subject + '&body=' + body;
 }
-function copyButton() {
-  if (recognizing) {
-    recognizing = false;
-    recognition.stop();
-  }
-  copy_button.style.display = 'none';
-  copy_info.style.display = 'inline-block';
-  showInfo('');
-}
-function emailButton() {
-  if (recognizing) {
-    create_email = true;
-    recognizing = false;
-    recognition.stop();
-  } else {
-    createEmail();
-  }
-  email_button.style.display = 'none';
-  email_info.style.display = 'inline-block';
-  showInfo('');
-}
 function startButton(event) {
   if (recognizing) {
     test_input.value = final_span.innerHTML;
@@ -221,7 +200,7 @@ function startButton(event) {
   ignore_onend = false;
   final_span.innerHTML = '';
   interim_span.innerHTML = '';
-  start_img.src = 'images/mic2.png';
+  start_img.src = 'assets/img/mic2.png';
   showInfo('info_allow');
   showButtons('none');
   start_timestamp = event.timeStamp;
@@ -245,7 +224,4 @@ function showButtons(style) {
   }
   current_style = style;
   copy_button.style.display = style;
-  email_button.style.display = style;
-  copy_info.style.display = 'none';
-  email_info.style.display = 'none';
 }
