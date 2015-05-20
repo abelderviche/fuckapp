@@ -127,7 +127,7 @@ if (!('webkitSpeechRecognition' in window)) {
     if(test_input.value == ''){
       showInfo('info_no_speech');
     }else{
-      $('#siguiente').fadeIn(500).css('display', 'block');;
+      $('#siguiente').fadeIn(500).css('display', 'block');
     }
     if (!final_transcript) {
       //showInfo('info_start');
