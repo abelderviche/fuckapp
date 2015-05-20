@@ -16,7 +16,7 @@ class Acl_login extends CI_Controller
     {
         parent::__construct();
         $this->load->library("session");
-        $this->load->helper(array("url", "acl"));
+        $this->load->helper(array("acl"));
         $this->load->model("acl/acl_login_model", "model");
 
     }

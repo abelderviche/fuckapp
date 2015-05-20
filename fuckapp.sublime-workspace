@@ -68,18 +68,18 @@
 			}
 		},
 		{
-			"file": "application/config/routes.php",
+			"file": "application/controllers/acl/Acl_login.php",
 			"settings":
 			{
-				"buffer_size": 2391,
-				"line_ending": "Unix"
+				"buffer_size": 3229,
+				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "application/views/welcome_message.php",
+			"file": "application/config/routes.php",
 			"settings":
 			{
-				"buffer_size": 2706,
+				"buffer_size": 2467,
 				"line_ending": "Unix"
 			}
 		}
@@ -121,22 +121,31 @@
 	],
 	"file_history":
 	[
+		"/home/patricio/Downloads/iron-acl-ci3-master/application/core/MY_Controller.php",
+		"/opt/lampp/htdocs/fuckapp/system/libraries/Session/Session.php",
+		"/opt/lampp/htdocs/fuckapp/application/views/templates/header.php",
+		"/opt/lampp/htdocs/fuckapp/application/config/routes.php",
+		"/opt/lampp/htdocs/fuckapp/application/views/alta_usuarios.php",
+		"/opt/lampp/htdocs/fuckapp/.htaccess",
+		"/opt/lampp/htdocs/fuckapp/db/schema-2.0.sql",
+		"/opt/lampp/htdocs/fuckapp/application/controllers/Usuarios.php",
+		"/opt/lampp/htdocs/fuckapp/application/views/welcome_message.php",
+		"/opt/lampp/htdocs/fuckapp/assets/js/speech.js",
+		"/opt/lampp/htdocs/fuckapp/assets/css/styles.css",
+		"/opt/lampp/logs/error_log",
+		"/opt/lampp/logs/php_error_log",
 		"/opt/lampp/htdocs/fuckapp/application/views/templates/footer.php",
 		"/opt/lampp/htdocs/fuckapp/application/config/autoload.php",
 		"/opt/lampp/htdocs/fuckapp/system/core/Config.php",
 		"/opt/lampp/htdocs/fuckapp/application/views/layout/menu.php",
-		"/opt/lampp/htdocs/fuckapp/application/views/templates/header.php",
 		"/opt/lampp/htdocs/fuckapp/assets/css/style.css",
 		"/opt/lampp/htdocs/pauta/index.php",
 		"/opt/lampp/htdocs/fuckapp/index.php",
 		"/opt/lampp/htdocs/fuckapp/application/controllers/Pasos.php",
 		"/opt/lampp/htdocs/fuckapp/application/controllers/Welcome.php",
-		"/opt/lampp/htdocs/fuckapp/assets/js/speech.js",
 		"/opt/lampp/htdocs/fuckapp/application/controllers/acl/Acl_login.php",
 		"/opt/lampp/htdocs/fuckapp/application/controllers/Ejemplo.php",
 		"/opt/lampp/htdocs/fuckapp/application/views/layout/default.php",
-		"/opt/lampp/htdocs/fuckapp/application/views/welcome_message.php",
-		"/opt/lampp/htdocs/fuckapp/application/config/routes.php",
 		"/home/patricio/Downloads/iron-acl-ci3-master/system/core/Router.php",
 		"/opt/lampp/htdocs/fuckapp/application/config/constants.php",
 		"/opt/lampp/htdocs/fuckapp/system/core/CodeIgniter.php",
@@ -204,7 +213,6 @@
 		"/home/patricio/mueble.sql",
 		"/opt/lampp/htdocs/mueble/databasename.sql",
 		"/home/patricio/Downloads/iron-acl-ci3-master/application/config/config.php",
-		"/home/patricio/Downloads/iron-acl-ci3-master/application/core/MY_Controller.php",
 		"/home/patricio/Downloads/iron-acl-ci3-master/application/config/acl.php",
 		"/opt/lampp/htdocs/pauta/application/views/reportes/campanias_generar_informe.php",
 		"/opt/lampp/htdocs/pauta/application/views/reportes/campanias.php",
@@ -245,6 +253,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"email",
+			"$('#siguiente').",
+			"siguiente",
 			"none",
 			"sub",
 			"none",
@@ -382,27 +393,57 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 330.0,
+						"translation.y": 242.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "application/config/routes.php",
+					"file": "application/controllers/acl/Acl_login.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2391,
+						"buffer_size": 3229,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2315,
-								2315
+								346,
+								346
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 132.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "application/config/routes.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2467,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1857,
+								1857
 							]
 						],
 						"settings":
@@ -410,36 +451,7 @@
 							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1298.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "application/views/welcome_message.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2706,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2017,
-								2017
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1067.0,
+						"translation.y": 792.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -497,12 +509,28 @@
 		"selected_items":
 		[
 			[
-				"welcom",
-				"application/views/welcome_message.php"
-			],
-			[
 				"rou",
 				"application/config/routes.php"
+			],
+			[
+				"heade",
+				"application/views/templates/header.php"
+			],
+			[
+				"alta",
+				"application/views/alta_usuarios.php"
+			],
+			[
+				"style",
+				"assets/css/styles.css"
+			],
+			[
+				"spee",
+				"assets/js/speech.js"
+			],
+			[
+				"welcom",
+				"application/views/welcome_message.php"
 			],
 			[
 				"foo",
@@ -707,7 +735,7 @@
 		[
 			[
 				"",
-				"/opt/lampp/htdocs/pauta/pauta.sublime-project"
+				"/opt/lampp/htdocs/test/paypal/paypal.sublime-project"
 			]
 		],
 		"width": 380.0
