@@ -62,5 +62,6 @@ $route['acl/permisos'] = 'acl/acl_permisos';
 $route['acl/permisos/listar'] = 'acl/acl_permisos/listar';
 $route['default_controller'] = 'welcome';
 $route["pasos/(:any)"] = 'pasos/$1';
+$route["usuarios/(:any)"] = 'usuarios/$1';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
