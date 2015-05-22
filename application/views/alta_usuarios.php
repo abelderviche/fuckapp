@@ -7,7 +7,7 @@
           <label for="first_name">First Name</label>
         </div>
         <div class="input-field col s12 m6">
-          <input id="last_name" type="text" class="validate">
+          <input id="last_name" type="text" class="validate" required>
           <label for="last_name">Last Name</label>
         </div>
       </div>
