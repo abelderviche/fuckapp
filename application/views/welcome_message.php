@@ -1,17 +1,11 @@
 	<section id="container">
-		<header>
-			<div id="volver"> <a href=""> < </a> </div> 
-			<figure>
-				<img src="<?php echo asset_url(); ?>img/logo.png" alt="logo">
-			</figure>
-		</header>
     <figure>
       <button id="start_button" onmousedown="startButton(event)" style="background:none;">
         <img id="start_img" src="<?php echo asset_url(); ?>img/mic2.png" alt="Start"></button>
     </figure>
     <a href=""><h1>APRETA PARA GRABAR</h1></a>
 
-<form id="form" method="POST" action="pasos/paso2">
+<form id="form" method="POST" action="/pasos/paso2">
 		<!-- mensajes de la aplicacion -->
 		<div id="info" style="text-align:center; font-size:14px;font-family: 'rawengulklight', sans-serif;">
 		  <p id="info_start"></p>
@@ -48,7 +42,7 @@
 	 	</div>
 		
     <input type="submit" value="SIGUIENTE" id="siguiente" class="siguiente">
-    <a href="manual.php" id="ingresar"><h2>INGRESAR MANUALMENTE</h2></a>
+    <a href="/pasos/manual" id="ingresar"><h2>INGRESAR MANUALMENTE</h2></a>
  <!--   <a href="" ><h3 style="display:none;" id="next_step">SIGUIENTE</h3></a> -->
 		<div id="pasos">
 			<figure><img src="<?php echo asset_url(); ?>img/paso-1.png" alt=""></figure>

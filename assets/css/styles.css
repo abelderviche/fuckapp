@@ -259,3 +259,26 @@ footer{
   #start_button:focus{
     outline:0;
   }
+      .cabecera{
+        background: #e0e0e0;
+        padding: 20px 0px;
+      }
+      .fecha,.lugar{
+        width: 45%;
+        display: inline-block;
+      }
+      .lugar{
+        text-align: right;
+      }
+      .fecha{
+        text-align: left;
+      }
+      .carta{
+        width: 100%;
+      }
+      .cuerpo{
+        width: 80%;
+        text-align: justify;
+        text-justify: inter-word;
+        margin: 0 auto;
+      }
