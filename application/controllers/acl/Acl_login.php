@@ -26,8 +26,8 @@ class Acl_login extends CI_Controller
      */
     public function index()
     {
-        if ( ! is_null($this->session->get_data('usuario'))) {
-            redirect("/", "refresh");
+        if ( ! is_null($this->session->get_data('usuario'))) {  
+            redirect("/admin/empresas/listar_empresas");
         }
         $referer = $this->input->server("HTTP_REFERER");
         if (stripos($referer, "login") === FALSE) {
@@ -67,7 +67,7 @@ class Acl_login extends CI_Controller
                 $this->_llenar_datos_usuario($idUsuarioLogueado);
                 $referer = $this->session->get_data("referer");
                 if (empty($referer)) {
-                    $referer = "/";
+                    $referer = "/admin/empresas/listar_empresas";
                 }
                 redirect($referer);
             } else {
@@ -87,7 +87,8 @@ class Acl_login extends CI_Controller
     public function logout()
     {
         $this->session->finalizar();
-        redirect("/");
+        redirect("/acl/acl_login");
+        
     }
 
     private function _llenar_datos_usuario($iIdUsuario)

@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="<?php echo asset_url(); ?>css/styles.css" />
     </head>
     <body id="<?php echo isset($page_id) ? $page_id : ""; ?>">
-        <?php $this->load->view("layout/menu"); ?>
+        <?php //$this->load->view("layout/menu"); ?>
         <div class="container">
         <header>
             <div id="volver"> <a href=""> < </a> </div> 
