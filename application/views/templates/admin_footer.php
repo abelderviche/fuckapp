@@ -7,5 +7,11 @@
 <script src="<?php echo asset_url(); ?>js/recorder.js" type="text/javascript"></script>
 <script src="<?php echo asset_url(); ?>js/recorderWorker.js" type="text/javascript"></script>
 <script src="<?php echo asset_url(); ?>js/speech.js" type="text/javascript"></script>
+<script>
+   $(document).ready(function(){
+   //listado empresas 
+    $('.modal-trigger').leanModal();
+  });
+</script>
 </body>
 </html>

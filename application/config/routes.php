@@ -49,18 +49,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['login'] = 'acl/acl_login';
-$route['logout'] = 'acl/acl_login/logout';
+$route['login'] = "acl/acl_login/index";
+$route['logout'] = "acl/acl_login/logout";
+$route['acl/permisos'] = "acl/acl_permisos";
+$route['acl/permisos/(:any)'] = "acl/acl_permisos/$1";
+$route['acl/usuarios'] = "acl/acl_usuarios";
+$route['acl/usuarios/(:any)'] = "acl/acl_usuarios/$1";
 
-$route['acl/grupos'] = 'acl/acl_grupos';
-$route['acl/grupos/listar'] = 'acl/acl_grupos/listar';
-
-$route['acl/usuarios'] = 'acl/acl_usuarios';
-$route['acl/usuarios/listar'] = 'acl/acl_usuarios/listar';
-
-$route['acl/permisos'] = 'acl/acl_permisos';
-$route['acl/permisos/listar'] = 'acl/acl_permisos/listar';
 $route['default_controller'] = 'welcome';
+
 $route["pasos/(:any)"] = 'pasos/$1';
 $route["acl/(:any)"] = 'acl/$1';
 $route["usuarios/(:any)"] = 'usuarios/$1';

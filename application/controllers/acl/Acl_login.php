@@ -65,7 +65,7 @@ class Acl_login extends CI_Controller
             if ($nroError === Acl_login_model::LOGIN_CORRECTO) {
                 $idUsuarioLogueado = (int) $this->model->get_id_usuario();
                 $this->_llenar_datos_usuario($idUsuarioLogueado);
-                $referer = $this->session->get_data("referer");
+                //$referer = $this->session->get_data("referer");
                 if (empty($referer)) {
                     $referer = "/admin/empresas/listar_empresas";
                 }
@@ -87,7 +87,7 @@ class Acl_login extends CI_Controller
     public function logout()
     {
         $this->session->finalizar();
-        redirect("/acl/acl_login");
+        redirect("/login");
         
     }
 

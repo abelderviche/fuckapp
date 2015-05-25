@@ -16,8 +16,8 @@ class MY_Controller extends CI_Controller
     {
         parent::__construct();
         $this->load->library("session");
-        $this->load->helper(array("url", "html", "form", "date", "listados", "acl", "error"));
-        $this->load->library(array("PHPSession"));
+        $this->load->helper(array("url", "html", "form", "date", "acl"));
+        //$this->load->library(array("PHPSession"));
         $this->load->database();
         //load var_dump extendido
         //$this->load->spark('krumo/0.0.1');
