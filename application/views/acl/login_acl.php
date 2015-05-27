@@ -1,21 +1,27 @@
 <?php if (!empty($error)) : ?>
-    <div class='row'>
-        <div class="js-alert alert alert-danger alert-dismissible col-md-4 col-md-offset-4" role="alert">
-            <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            <strong>¡Error!</strong> <?php echo $error; ?>.
+    <script>
+    $(document).ready(function($) {
+        Materialize.toast('Usuario o Password no v&aacute;lido', 4000); 
+        
+    });
+    </script>
+<?php endif; ?>
+<div class="row">
+<form class="form-signin s12" role="form" action="/acl/acl_login/login" method="POST">
+            <h2>Ingrese los datos</h2>
+            <div class="divider" style="margin-bottom:20px;"></div>
+        <div class="input-field col s12 m6 offset-m2">
+            <input type="text" id="usuario" name="usuario" class="validate" placeholder="Usuario" required autofocus>
+            <label for="usuario">Usuario: </label>
+        </div>
+        <div class="input-field col s12 m6 offset-m2">    
+            <label for="contrasenia">Contrase&ntilde;a</label>
+            <input type="password" id="contrasenia" name="contrasenia" class="validate" placeholder="Password" required>
+        </div>    
+            <div class="input-field col s12 m6 offset-m2 center-align">
+                <button class="btn waves-effect waves-light deep-purple darken-1" name="login" value="1" type="submit">Entrar <i class="mdi-content-send right"></i></button>
+            </div> 
         </div>
     </div>
-<?php endif; ?>
-<form class="form-signin" role="form" action="/acl/acl_login/login" method="POST">
-    <h2 class="form-signin-heading">Ingrese los datos</h2>
-    <label for="usuario" class="sr-only">Usuario</label>
-    <input type="text" id="usuario" name="usuario" class="form-control" placeholder="Usuario" required autofocus>
-    <label for="contrasenia" class="sr-only">Contrase&ntilde;a</label>
-    <input type="password" id="contrasenia" name="contrasenia" class="form-control" placeholder="Password" required>
-    <!--    <div class="checkbox">
-            <label>
-                <input type="checkbox" value="remember-me"> Remember me
-            </label>
-        </div>-->
-    <button class="btn btn-lg btn-primary btn-block" name="login" value="1" type="submit">Entrar</button>
 </form>
+</div>

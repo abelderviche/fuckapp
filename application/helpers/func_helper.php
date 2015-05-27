@@ -82,3 +82,21 @@ function sanear_string($string)
 
     return $string;
 }
+
+function get_tipo_empresa($bSoloActivo = TRUE)
+{
+    $CI = & get_instance();
+    $where = array("eliminado" => 0);
+    if ($bSoloActivo === FALSE) {
+        $where = array();
+    }
+    $CI->db->order_by("nombre");
+    $query = $CI->db->get_where("tipo_empresa", $where);
+    $rows = $query->result_array();
+    $rows_id_key = array();
+    foreach ($rows as & $row) {
+        $row["nombre"] = $row["nombre"];
+        $rows_id_key[(int) $row["id"]] = $row;
+    }
+    return $rows_id_key;
+}
