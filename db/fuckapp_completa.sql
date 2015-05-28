@@ -1,3 +1,4 @@
+use fuckapp;
 -- MySQL dump 10.13  Distrib 5.6.19, for linux-glibc2.5 (x86_64)
 --
 -- Host: localhost    Database: fuckapp
