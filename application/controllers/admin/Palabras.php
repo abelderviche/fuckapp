@@ -1,14 +1,14 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Empresas extends MY_Controller {
-	const TABLA = "empresa";
+class Palabras extends MY_Controller {
+	const TABLA = "palabra_clave";
     const PK = "id";
 	public function __construct()
     	{   
       	parent::__construct();
       	$this->load->library("session");
-      	$this->load->model("empresa_model");
+      	$this->load->model("palabra_model");
     	}   
 	/**
 	 * Index Page for this controller.
@@ -26,32 +26,31 @@ class Empresas extends MY_Controller {
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
 
-	public function listar_empresas()
+	public function listar()
 	{
-		$empresas = $this->empresa_model->get_all();
+		$empresas = $this->palabra_model->get_all();
 		$data = array();
 		$data["empresas"] = $empresas;
 		$dataLayout = array();
-		$data["page_id"] = "listar_empresas";
-        $dataLayout["contenido"] = $this->load->view("listado_empresas",$data,TRUE);
+		$data["page_id"] = "listar_palabras";
+        $dataLayout["contenido"] = $this->load->view("listado_palabras",$data,TRUE);
         $this->load->view("layout/admin", $dataLayout);
 	}
 	/**
 	* @whitelist true
 	**/
-	public function ajax_agregar_empresa() {
-		$valores["nombre"] = (string) $this->input->post("nombre_empresa");
-		$valores["id_tipo_empresa"] = (int) $this->input->post("id_tipo_empresa");
+	public function ajax_agregar_palabra() {
+		$valores["palabra"] = (string) $this->input->post("palabra");
 		$id_empresa = $this->_agregar($valores);
 		echo (int) $id_empresa;
 	}
 	/**
 	* @whitelist true
 	**/
-	public function ajax_eliminar_empresa() {
-		$id_empresa = (int) $this->input->post("id_empresa");
+	public function ajax_eliminar_palabra() {
+		$id_palabra = (int) $this->input->post("id_palabra");
 		$valores =array("eliminado" => 1);
-		$actualizado = $this->_actualizar($valores,$id_empresa);
+		$actualizado = $this->_actualizar($valores,$id_palabra);
 		echo (int) $actualizado;
 	}
 }

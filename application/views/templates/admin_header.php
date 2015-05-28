@@ -12,17 +12,30 @@
         <header>
           <nav>
             <div class="nav-wrapper deep-purple lighten-2">
-              <ul id="nav-mobile" class="left hide-on-med-and-down">
+              <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+              <ul class="left hide-on-med-and-down">
               <li style="margin: 0 30px;"><span style="font-size:1.5em"><?=$this->session->get_data('usuario/nombre')?> <?=$this->session->get_data('usuario/apellido')?></span></li>
                 <?php if (tiene_permiso("listar_empresas")) :  ?>
                 <li <?=(isset($page_id) && $page_id == "listar_empresas") ? "class='active'" : ""?>><a href="/admin/empresas/listar_empresas">Empresas</a></li>
-                <li <?=(isset($page_id) && $page_id == "listar_tipo_de_empresas") ? "class='active'" : ""?>><a href="/admin/empresas/listar_tipo_empresas">Tipos de Empresa</a></li>
-                <li <?=(isset($page_id) && $page_id == "listar_palabras_clave") ? "class='active'" : ""?>><a href="/admin/empresas/listar_palabras_clave">Palabras Clave</a></li>                
+                <li <?=(isset($page_id) && $page_id == "listar_tipoempresas") ? "class='active'" : ""?>><a href="/admin/tipoempresas/listar">Tipos de Empresa</a></li>
+                <li <?=(isset($page_id) && $page_id == "listar_palabras") ? "class='active'" : ""?>><a href="/admin/palabras/listar">Palabras Clave</a></li>                
                 <?php endif; ?>
                 <?php if ((int) $this->session->get_data("usuario/id_acl_usuario") == 1) : //solo para ironadmin : ?>
                   <li> <a href="/acl/permisos">Permisos</a></li>
                 <?php endif; ?>
-            </ul>              
+            </ul>  
+                <!-- mobile -->               
+                <ul class="side-nav" id="mobile-demo">
+                <?php if (tiene_permiso("listar_empresas")) :  ?>
+                <li <?=(isset($page_id) && $page_id == "listar_empresas") ? "class='active'" : ""?>><a href="/admin/empresas/listar_empresas">Empresas</a></li>
+                <li <?=(isset($page_id) && $page_id == "listar_tipoempresas") ? "class='active'" : ""?>><a href="/admin/empresas/listar_tipo_empresas">Tipos de Empresa</a></li>
+                <li <?=(isset($page_id) && $page_id == "listar_palabras") ? "class='active'" : ""?>><a href="/admin/empresas/listar_palabras_clave">Palabras Clave</a></li>                
+                <?php endif; ?>
+                <?php if ((int) $this->session->get_data("usuario/id_acl_usuario") == 1) : //solo para ironadmin : ?>
+                  <li> <a href="/acl/permisos">Permisos</a></li>
+                <?php endif; ?>    
+                <li><a href="/logout">Logout</li>            
+                </ul>                
               <span class="brand-logo center"><img src="<?php echo asset_url(); ?>img/logo.png" alt="logo"></span>
               <ul class="right hide-on-med-and-down">
         <li style="margin: 0 10px;"><a href="/logout"><i class="mdi-action-settings-power"></i></li>

@@ -3,7 +3,7 @@ $tipos_empresa = get_tipo_empresa();
 ?>
 <div class="row">
   <div class="col s12 m6 offset-m3">
-    <h2 class="deep-purple-text accent-1">Empresas</h2>
+    <h2 class="deep-purple-text accent-1">Empresas (tipo de empresa)</h2>
     <div class="divider" style="margin-bottom:20px;"></div>
   </div>
 </div>

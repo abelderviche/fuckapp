@@ -6,7 +6,7 @@
  * Encoding: UTF-8
  * Project: iron_acl_ci3
  * Description of MY_Controllers
- *
+ * @whitelist true
  * @author Diego Olmedo
  */
 class MY_Controller extends CI_Controller
