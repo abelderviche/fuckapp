@@ -43,7 +43,7 @@ class Acl_control
     private function _whitelist_logueado()
     {
         $controlador = $this->_CI->router->fetch_class();
-        if ($controlador === self::CONTROLADOR_LOGIN) {
+        if ($controlador === self::CONTROLADOR_LOGIN || $controlador == "welcome") {
             return TRUE;
         }
         return FALSE;
