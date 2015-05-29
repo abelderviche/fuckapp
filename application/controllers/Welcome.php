@@ -21,6 +21,10 @@ public function __construct()
         $this->load->view("layout/default", $dataLayout);
 	}
 	public function paso2(){
-		print_r($_POST);die;
+		$data = array();
+        $data["parametros"] = "parametro1";
+        $dataLayout = array();
+        $dataLayout["contenido"] = $this->load->view("usuario_registro",$data,TRUE);
+        $this->load->view("layout/default", $dataLayout);
 	}
 }
