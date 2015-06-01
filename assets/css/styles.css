@@ -339,4 +339,14 @@ footer{
    #submit_alta {
    	background-color: #e98b39;
    }
-
+.activo{
+  color: #e0e0e0;
+}
+#usuario_registro a .activo {
+    color: black;
+  text-decoration: none;
+}
+#usuario_registro a:hover a:focus a:active {
+    color: black;
+  text-decoration: none;
+}
