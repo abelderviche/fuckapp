@@ -20,7 +20,22 @@ public function __construct()
         $dataLayout["contenido"] = $this->load->view("welcome_message",$data,TRUE);
         $this->load->view("layout/default", $dataLayout);
 	}
+    public function manual(){
+        $data["carta_final"] = 'manual';
+        $dataLayout = array();
+        $dataLayout["contenido"] = $this->load->view("manual",$data,TRUE);
+        $this->load->view("layout/default", $dataLayout);
+    }    
+    public function manual_post(){
+        if ($this->input->post("finalizar") !== FALSE){
+            $this->session->set_userdata('puteada', $this->input->post("problema"));
+            redirect("/paso2");
+        }
+    }
 	public function paso2(){
+        if ($this->session->userdata("puteada") == "") {
+            redirect("/");
+        }
 		$data = array();
         $data["parametros"] = "parametro1";
         $dataLayout = array();

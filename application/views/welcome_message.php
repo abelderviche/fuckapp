@@ -42,7 +42,7 @@
 	 	</div>
 		
     <input type="submit" value="SIGUIENTE" id="siguiente" class="siguiente">
-    <a href="/pasos/manual" id="ingresar"><h2>INGRESAR MANUALMENTE</h2></a>
+    <a href="/manual" id="ingresar"><h2>INGRESAR MANUALMENTE</h2></a>
  <!--   <a href="" ><h3 style="display:none;" id="next_step">SIGUIENTE</h3></a> -->
 		<div id="pasos">
 			<figure><img src="<?php echo asset_url(); ?>img/paso-1.png" alt=""></figure>

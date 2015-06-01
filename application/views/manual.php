@@ -1,14 +1,16 @@
-    <div style="border:1px solid #290728;margin-top:3px;text-align:center;">
-      <div style="font-weight:bolder;font-size:15px;border-bottom:2px solid #300830;background-color:#290728;color:white; ">Carga Manual</div>
-      <div style="font-size:15px;margin-top:2px">
-        <form id="form" method="POST" action="paso2.php">
+    
+<div style="border:1px solid #290728;margin-top:3px;text-align:center;">
+  <div style="font-weight:bolder;font-size:15px;border-bottom:2px solid #300830;background-color:#290728;color:white; ">Carga Manual</div>
+    <div class="col-sm-12">
+      <form id="form" method="POST" action="/manual_post">
         <input type="hidden" name="manual" value="1">
-          <label>Nombre:</label><input type="text" required name="nombre"><br>
-          <label>Apellido:</label><input type="text" required name="apellido"><br>
-          <label> DNI:</label><input type="text" required name="dni"><br>
-          <label> Empresa:</label><input type="text" required name="empresa"><br>
-          <label>  Puteada:</label><textarea required name="problema"></textarea><br>
-          <input type="submit" value="finalizar">
-        </form>
-      </div>
-    </div>
+        
+        <div class="form-group">
+          <label for="problema">Ingrese su puteada:</label>
+          <textarea class="form-control" rows="5" name="problema" id="problema"></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit" name="finalizar" href="#"><i class="fa fa-paper-plane fa-fw"></i> Finalizar</button>
+      </form>
+    </div>  
+  </div>
+</div>
