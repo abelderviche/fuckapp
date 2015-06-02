@@ -1,0 +1,117 @@
+
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:700);
+@font-face {
+    font-family: 'rawengulkbold';
+    src: url('fonts/rawengulkbold-webfont.eot');
+    src: url('fonts/rawengulkbold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/rawengulkbold-webfont.woff2') format('woff2'),
+         url('fonts/rawengulkbold-webfont.woff') format('woff'),
+         url('fonts/rawengulkbold-webfont.ttf') format('truetype'),
+         url('fonts/rawengulkbold-webfont.svg#rawengulkbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'rawengulklight';
+    src: url('fonts/rawengulklight-webfont.eot');
+    src: url('fonts/rawengulklight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/rawengulklight-webfont.woff2') format('woff2'),
+         url('fonts/rawengulklight-webfont.woff') format('woff'),
+         url('fonts/rawengulklight-webfont.ttf') format('truetype'),
+         url('fonts/rawengulklight-webfont.svg#rawengulklight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'rawengulkpcsregular';
+    src: url('fonts/rawengulkpcs-webfont.eot');
+    src: url('fonts/rawengulkpcs-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/rawengulkpcs-webfont.woff2') format('woff2'),
+         url('fonts/rawengulkpcs-webfont.woff') format('woff'),
+         url('fonts/rawengulkpcs-webfont.ttf') format('truetype'),
+         url('fonts/rawengulkpcs-webfont.svg#rawengulkpcsregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+    *{
+        border:none;
+        font-size: 10px;
+    }
+        body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+      main {
+        flex: 1 0 auto;
+      }
+      nav #volver{
+    color: white;
+    text-decoration: none;
+    font-size: 4.9em;
+    font-weight: 700;
+}
+#container h1{
+    font-family: 'rawengulklight', sans-serif;
+    color:#909090;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+#container h2{
+    font-family: 'rawengulklight', sans-serif;
+    color:#ff3500;
+    border: 1px solid #ff3500;
+    border-radius: 5px;
+    text-align: center;
+    margin: auto;
+    padding: 1em;
+    width: 50%;
+    margin-bottom: 20px;
+    font-size: 1.4em;
+    line-height: 2.916rem; 
+
+}
+
+#container h3{
+    font-family: 'rawengulklight', sans-serif;
+    color:#fff;
+    background: #ff2700; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ff2700 0%, #ff5e07 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff2700), color-stop(100%,#ff5e07)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #ff2700 0%,#ff5e07 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #ff2700 0%,#ff5e07 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #ff2700 0%,#ff5e07 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #ff2700 0%,#ff5e07 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff2700', endColorstr='#ff5e07',GradientType=0 ); /* IE6-9 */
+    border-radius: 5px;
+    margin: auto;
+    padding: 1em;
+    text-align: center;
+    font-size: 1.4em;
+    margin-bottom: 20px;
+}
+
+.siguiente{
+    display: none;
+    font-family: 'rawengulklight', sans-serif;
+  color: #fff;
+  background: #ff2700;
+  background: -moz-linear-gradient(top, #ff2700 0%, #ff5e07 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff2700), color-stop(100%,#ff5e07));
+  background: -webkit-linear-gradient(top, #ff2700 0%,#ff5e07 100%);
+  background: -o-linear-gradient(top, #ff2700 0%,#ff5e07 100%);
+  background: -ms-linear-gradient(top, #ff2700 0%,#ff5e07 100%);
+  background: linear-gradient(to bottom, #ff2700 0%,#ff5e07 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff2700', endColorstr='#ff5e07',GradientType=0 );
+  border-radius: 5px;
+  width: 50%;
+  margin: auto;
+  padding: 1em;
+  text-align: center;
+  font-size: 1.4em;
+  margin-bottom: 20px;
+  }
+
