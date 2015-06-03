@@ -4,7 +4,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
      * @whitelist true
      */
 class Welcome extends MY_Controller {
-public function __construct()
+    const TABLA = "puteadas";
+    const PK = "id";
+    
+    public function __construct()
     {   
         parent::__construct();
       
@@ -20,19 +23,27 @@ public function __construct()
         $dataLayout["contenido"] = $this->load->view("welcome_message",$data,TRUE);
         $this->load->view("layout/default", $dataLayout);
 	}
+
     public function manual(){
+        $data = array();
         $data["carta_final"] = 'manual';
+        $data["page_id"] = "ingreso_manual_puteada";
         $dataLayout = array();
         $dataLayout["contenido"] = $this->load->view("manual",$data,TRUE);
         $this->load->view("layout/default", $dataLayout);
     }    
+
     public function manual_post(){
-        if ($this->input->post("finalizar") !== FALSE){
-            $this->session->set_userdata('puteada', $this->input->post("problema"));
+        if ($this->input->post("finalizar") !== FALSE) {
+            $valores["puteada"] = $this->input->post("problema");
+            $puteada = $this->_agregar($valores);
+            $this->session->set_userdata(array('puteada' => $this->input->post("problema"),"id_puteada" => $puteada));
             redirect("/paso2");
         }
-    }
+    }    
+
 	public function paso2(){
+        print_r($this->session->userdata);
         if ($this->session->userdata("puteada") == "") {
             redirect("/");
         }
@@ -52,6 +63,9 @@ public function __construct()
             if ($nroError === Usuario_model::LOGIN_CORRECTO) {
                 $idUsuarioLogueado = (int) $this->usuario_model->get_id_usuario();
                 $this->_llenar_datos_usuario($idUsuarioLogueado);
+                $id_puteada = $this->session->userdata('id_puteada');
+                $valores["id_usuario"] = $idUsuarioLogueado;
+                $this->_actualizar($valores,$id_puteada);
                     echo "ir a pagina ya logueado";
                     print_r($_SESSION);die;
             } else {
@@ -77,8 +91,15 @@ public function __construct()
             );
             $values["contrasenia"] = $this->_encriptar_contrasenia($this->input->post("contrasenia"));
             $id_usuario = $this->usuario_model->agregar_usuario($values);
-            if ((int) $id_usuario > 0) {
+            $valores["id_usuario"] = $id_usuario;
 
+            $id_puteada = $this->session->userdata('id_puteada');
+            $this->_actualizar($valores,$id_puteada);
+            if ((int) $id_usuario > 0) {
+                $idUsuarioLogueado = (int) $this->usuario_model->get_id_usuario();
+                $this->_llenar_datos_usuario($idUsuarioLogueado);
+                echo "ir a pagina ya logueado";
+                print_r($_SESSION);die;
             }
         } else {
            show_error("No se pudo procesar el pedido", "500", "Error");
