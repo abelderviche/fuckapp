@@ -1,4 +1,3 @@
-        </div> <!-- close div containder -->
         <footer class="page-footer" style="background-color:#3b0a3b">
           <div class="footer-copyright">
             <div class="container center">

@@ -1,8 +1,16 @@
-<div id="container">
-	<button id="start_button" onmousedown="startButton(event)" style="background:none;border:none;">
-		<img id="start_img" src="<?php echo asset_url(); ?>/img/mic2.png" alt="Start">
-	</button>
-	<h1>APRETA PARA GRABAR</h1>
+<div id="container" class="container center">
+	
+<div class="row">
+	<div class="col s10 center offset-s1">
+		<button id="start_button" onmousedown="startButton(event)" style="background:none;border:none;margin-top:20px;">
+			<img class="responsive-img" id="start_img" src="<?php echo asset_url(); ?>/img/mic2.png" alt="Start">
+		</button>
+	</div>
+<div class="col s12 m6 offset-m3">
+	 			<h1>APRETA PARA GRABAR</h1>
+	 		</div>
+</div>
+	
 <form id="form" method="POST" action="/pasos/paso2">
 	<!-- mensajes de la aplicacion -->
 	<div id="info" style="text-align:center; font-size:14px;font-family: 'rawengulklight', sans-serif;">
@@ -38,14 +46,26 @@
 		&nbsp;&nbsp;
 		<select id="select_dialect"></select>
 	</div>
-	<input type="submit" value="SIGUIENTE" id="siguiente" class="siguiente">
-	<a href="/manual" id="ingresar"><h2>INGRESAR MANUALMENTE</h2></a>
+
+		<div class="row ">
+			<div class="col s12 m6 offset-m3">
+	 			<a href="/manual" id="ingresar"><h2>INGRESAR MANUALMENTE</h2></a>
+	 		</div>
+	 		<div class="col s12 m6 offset-m3">
+	 			<input type="submit" value="SIGUIENTE" id="siguiente" class="siguiente">
+	 		</div>
+	 		<div id="pasos">
+				 <img class="responsive-img" src="<?php echo asset_url(); ?>/img/paso-1.png" alt="">
+			</div>
+ 		</div>
+ 		
+		
+
 	<!--   <a href="" ><h3 style="display:none;" id="next_step">SIGUIENTE</h3></a> -->
-	<div id="pasos">
-		<figure> <img class="responsive-img" src="<?php echo asset_url(); ?>/img/paso-1.png" alt=""></figure>
-	</div>
+
 </form>
 </div>
+
 <script>
 	dominio = "<?php echo asset_url(); ?>";
 </script>
