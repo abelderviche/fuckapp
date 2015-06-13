@@ -38,7 +38,7 @@
                 </ul>                
               <span class="brand-logo center"><img src="<?php echo asset_url(); ?>img/logo.png" alt="logo"></span>
               <ul class="right hide-on-med-and-down">
-        <li style="margin: 0 10px;"><a href="/logout"><i class="mdi-action-settings-power"></i></li>
+        <li style="margin: 0 10px;"><a href="/logout"><i class="mdi-action-settings-power"></i></a></li>
       </ul>
             </div>
           </nav>        
