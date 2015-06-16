@@ -11,12 +11,14 @@
     </head>
     <body id="<?php echo isset($page_id) ? $page_id : ""; ?>">
     <?php $this->load->view("layout/menu"); ?>
-        <nav>
+         <nav>
             <div class="nav-wrapper" style="background-color:#290728;background: -moz-linear-gradient(top, #290728 0%, #3c0a3c 100%);">
                 <!-- <img src="<?php //echo asset_url(); ?>img/logo.png" alt="logo">-->
-                <a href="#" class="brand-logo right" style="text-align: center;"><img height="50px" src="<?php echo asset_url(); ?>/img/logo.png" alt="logo"></a>
-                <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <a href="#" class="right" style="text-align: center; margin-right:10px;"><img height="50px" src="<?php echo asset_url(); ?>/img/logo.png" alt="logo"></a>
+                <ul id="nav-mobile" class="left">
                     <li><a href="" id="volver"><</a></li>
                 </ul>
             </div>
         </nav>
+
+       

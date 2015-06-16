@@ -53,6 +53,7 @@ $route['default_controller'] = 'welcome';
 $route['manual'] = 'welcome/manual';
 $route['manual_post'] = 'welcome/manual_post';
 $route['paso2'] = 'welcome/paso2';
+$route['paso2_registro'] = 'welcome/paso2_registro';
 $route['usuario_login'] = 'welcome/usuario_login';
 $route['usuario_registro'] = 'welcome/usuario_registro';
 $route['login'] = "acl/acl_login/index";

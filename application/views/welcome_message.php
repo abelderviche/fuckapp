@@ -1,4 +1,25 @@
 <div id="container" class="container center">
+
+
+ <h1>Facebook stuff</h1>
+
+    <?php if (@$user_profile): ?>
+        <pre>
+            <?php echo print_r($user_profile, TRUE) ?>
+        </pre>
+        <a href="<?= $logout_url ?>">Logout</a>
+    <?php else: ?>
+        <h2>Welcome, please login below</h2>
+        <a href="<?= $login_url ?>">Login</a>
+    <?php endif; ?>
+
+
+
+
+
+
+
+
 	
 <div class="row">
 	<div class="col s10 center offset-s1">
@@ -6,12 +27,12 @@
 			<img class="responsive-img" id="start_img" src="<?php echo asset_url(); ?>/img/mic2.png" alt="Start">
 		</button>
 	</div>
-<div class="col s12 m6 offset-m3">
-	 			<h1>APRETA PARA GRABAR</h1>
-	 		</div>
+	<div class="col s12 m6 offset-m3">
+		<h1>APRETA PARA GRABAR</h1>
+	</div>
 </div>
 	
-<form id="form" method="POST" action="/pasos/paso2">
+<form id="form" method="POST" action="/manual_post">
 	<!-- mensajes de la aplicacion -->
 	<div id="info" style="text-align:center; font-size:14px;font-family: 'rawengulklight', sans-serif;">
 		<p id="info_start"></p>
@@ -36,7 +57,7 @@
 	<div id="results" style="display:none;">
 		<span id="final_span" class="final"></span>
 		<span id="interim_span" class="interim"></span>
-		<input type="text" name="texto" id="test_input" style="background:blue;" />
+		<input type="text" name="problema" id="test_input" style="background:blue;" />
 		<p>
 	</div>
 

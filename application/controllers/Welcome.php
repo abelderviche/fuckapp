@@ -20,6 +20,32 @@ class Welcome extends MY_Controller {
 		$data = array();
 		$data["parametros"] = "parametro1";
 		$dataLayout = array();
+
+        $fb_config = array(
+            'appId'  => '364289940434061',
+            'secret' => '4c5f1b726f910f981eaff9e2c8bd08ba'
+        );
+
+        $this->load->library('facebook', $fb_config);
+
+        $user = $this->facebook->getUser();
+
+        if ($user) {
+            try {
+                $data['user_profile'] = $this->facebook
+                    ->api('/me');
+            } catch (FacebookApiException $e) {
+                $user = null;
+            }
+        }
+
+        if ($user) {
+            $data['logout_url'] = $this->facebook
+                ->getLogoutUrl();
+        } else {
+            $data['login_url'] = $this->facebook
+                ->getLoginUrl();
+        }
         $dataLayout["contenido"] = $this->load->view("welcome_message",$data,TRUE);
         $this->load->view("layout/default", $dataLayout);
 	}
@@ -50,10 +76,25 @@ class Welcome extends MY_Controller {
 		$data = array();
         $data["parametros"] = "parametro1";
         $dataLayout = array();
-        $data["page_id"] = "usuario_registro";
+        $data["page_id"] = "usuario_login";
+        $this->load->view("usuario_login",$data,FALSE);
+        //$dataLayout["contenido"] = $this->load->view("usuario_registro",$data,TRUE);
+        //$this->load->view("layout/default", $dataLayout);
+	}
+    public function paso2_registro(){
+     //   print_r($this->session->userdata);
+        if ($this->session->userdata("puteada") == "") {
+            redirect("/");
+        }
+        $data = array();
+        $data["parametros"] = "parametro1";
+        $dataLayout = array();
+        $data["page_id"] = "registro";
+      //  $this->load->view("usuario_registro",$data,FALSE);
         $dataLayout["contenido"] = $this->load->view("usuario_registro",$data,TRUE);
         $this->load->view("layout/default", $dataLayout);
-	}
+    }
+
     public function usuario_login(){
         $this->load->model("usuario_model");
         if ($this->input->post("entrar") !== FALSE){
@@ -81,6 +122,7 @@ class Welcome extends MY_Controller {
         }
     }
     public function usuario_registro(){
+
         $this->load->model("usuario_model");        
         if ($this->input->post("registro") !== FALSE){
             $values = array(
@@ -89,6 +131,7 @@ class Welcome extends MY_Controller {
                 "email" => $this->input->post("email"),
                 "contrasenia_sin_encriptar" => $this->input->post("contrasenia"),
             );
+            
             $values["contrasenia"] = $this->_encriptar_contrasenia($this->input->post("contrasenia"));
             $id_usuario = $this->usuario_model->agregar_usuario($values);
             $valores["id_usuario"] = $id_usuario;
