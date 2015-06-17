@@ -100,3 +100,49 @@ function get_tipo_empresa($bSoloActivo = TRUE)
     }
     return $rows_id_key;
 }
+function get_palabras_clave()
+{
+    $CI = & get_instance();
+    $where = array("eliminado" => 0);
+    $CI->db->order_by("palabra");
+    $query = $CI->db->get_where("palabra_clave", $where);
+    $rows = $query->result_array();
+    $rows_id_key = array();
+    foreach ($rows as & $row) {
+        $row["palabra"] = $row["palabra"];
+        $rows_id_key[(int) $row["id"]] = $row;
+    }
+    return $rows_id_key;
+}
+function get_empresas()
+{
+    $CI = & get_instance();
+    $where = array("e.eliminado" => 0);
+    $CI->db->select("e.id as id_empresa, tp.id as id_tipo_empresa,e.nombre as empresa, tp.nombre as tipo_empresa,tp.template");
+    $CI->db->order_by("e.nombre");
+    $CI->db->join("tipo_empresa tp","tp.id=e.id_tipo_empresa","INNER");
+    $query = $CI->db->get_where("empresa e", $where);
+    $rows = $query->result_array();
+    $rows_id_key = array();
+    foreach ($rows as & $row) {
+        $row["empresa"] = $row["empresa"];
+        $rows_id_key[(int) $row["id_empresa"]] = $row;
+    }
+    return $rows_id_key;
+}
+function get_datos_por_id($iIdPuteada) {
+    $id_puteada = (int) $iIdPuteada;
+    if ($id_puteada == 0) {
+        return FALSE;
+    }
+    $CI = & get_instance();
+    $where = array("p.id" => $id_puteada);
+    $CI->db->select("p.puteada,e.nombre empresa,u.nombre,u.apellido,tp.template");
+    $CI->db->order_by("e.nombre");
+    $CI->db->join("usuario u","u.id=p.id_usuario","INNER");
+    $CI->db->join("empresa e","p.id_empresa=e.id","INNER");
+    $CI->db->join("tipo_empresa tp","tp.id=e.id_tipo_empresa","INNER");
+    $query = $CI->db->get_where("puteadas p", $where);
+    $row = $query->row_array();
+    return $row;
+}

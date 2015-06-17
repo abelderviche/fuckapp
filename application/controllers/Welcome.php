@@ -61,7 +61,18 @@ class Welcome extends MY_Controller {
 
     public function manual_post(){
         if ($this->input->post("finalizar") !== FALSE) {
+            $palabras_clave = get_palabras_clave();
+            $empresas = get_empresas();
             $valores["puteada"] = $this->input->post("problema");
+            /*
+            **  ACA CHEQUEAR SI PUTEADA TIENE PALABRA CLAVE Y EMPRESA. 
+            **  SI NO DIJO PUTEADA O EMPRESA, CREO QUE HABRÍA QUE MANDARLO AL INDEX con variable GET
+            **  redirect("/index.php?error=empresa"); redirect("/index.php?error=palabra");
+            **  Y MOSTRARTE ALGUN CARTEL SEGUN CORRESPONDA
+            **  TAMBIEN AGREGAR EL ID EMPRESA A LA TABLA PUTEADA
+            **  $valores["id_empresa"] = numero de id de empresa encontrada;
+            */
+            $valores["id_empresa"] = 1; //HARDCODE
             $puteada = $this->_agregar($valores);
             $this->session->set_userdata(array('puteada' => $this->input->post("problema"),"id_puteada" => $puteada));
             redirect("/paso2");
@@ -69,7 +80,7 @@ class Welcome extends MY_Controller {
     }    
 
 	public function paso2(){
-        print_r($this->session->userdata);
+        //print_r($this->session->userdata);
         if ($this->session->userdata("puteada") == "") {
             redirect("/");
         }
@@ -87,7 +98,6 @@ class Welcome extends MY_Controller {
             redirect("/");
         }
         $data = array();
-        $data["parametros"] = "parametro1";
         $dataLayout = array();
         $data["page_id"] = "registro";
       //  $this->load->view("usuario_registro",$data,FALSE);
@@ -107,8 +117,7 @@ class Welcome extends MY_Controller {
                 $id_puteada = $this->session->userdata('id_puteada');
                 $valores["id_usuario"] = $idUsuarioLogueado;
                 $this->_actualizar($valores,$id_puteada);
-                    echo "ir a pagina ya logueado";
-                    print_r($_SESSION);die;
+                redirect("/compartir/".$id_puteada);
             } else {
                 if ($nroError === Usuario_model::ERROR_BLOQUEADO) {
                     redirect('/paso2?respuesta=bloqueado');
@@ -148,7 +157,19 @@ class Welcome extends MY_Controller {
            show_error("No se pudo procesar el pedido", "500", "Error");
         }
     } 
-
+    public function compartir($iIdPuteada){
+        $id_puteada = (int) $iIdPuteada;
+        if ($id_puteada == 0) {
+            show_error("No se pudo procesar el pedido", "500", "Error");
+        }
+        $data = array();
+        $data["datos"] = get_datos_por_id($this->session->userdata('id_puteada'));
+        $template = "carta_prueba";
+        $dataLayout = array();
+        $dataLayout["page_id"] = "compartir";
+        $dataLayout["contenido"] = $this->load->view($template,$data,TRUE);
+        $this->load->view("layout/default", $dataLayout);
+    }
     /**
      * Encripta la contrase�a con crypy y el salt Blowfish
      * Idea tomada del siguiente link
