@@ -114,6 +114,7 @@ nav #volver{
   margin-bottom: 30px;
   line-height: 2.4em;
   margin-top: 20px;
+  width: 100%;
 }
 
 #login-fb{

@@ -1,7 +1,7 @@
 <div id="container" class="container center">
 
-
- <h1>Facebook stuff</h1>
+<!--
+ 	<h1>Facebook stuff</h1>
 
     <?php if (@$user_profile): ?>
         <pre>
@@ -12,7 +12,7 @@
         <h2>Welcome, please login below</h2>
         <a href="<?= $login_url ?>">Login</a>
     <?php endif; ?>
-
+-->
 
 
 
@@ -73,7 +73,7 @@
 	 			<a href="/manual" id="ingresar"><h2>INGRESAR MANUALMENTE</h2></a>
 	 		</div>
 	 		<div class="col s12 m6 offset-m3">
-	 			<input type="submit" value="SIGUIENTE" id="siguiente" class="siguiente">
+	 			<input type="submit" value="SIGUIENTE" id="siguiente" class="siguiente" style="display:none;">
 	 		</div>
 	 		<div id="pasos">
 				 <img class="responsive-img" src="<?php echo asset_url(); ?>/img/paso-1.png" alt="">
