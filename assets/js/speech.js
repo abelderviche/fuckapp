@@ -95,6 +95,7 @@ if (!('webkitSpeechRecognition' in window)) {
     showInfo('info_speak_now');
     //siguiente.style.display = 'none';
     $('#siguiente').hide(500);
+    $('#puteada_mostrar').hide(500);
     start_img.src = dominio + 'img/mic2.gif';
   };
   recognition.onerror = function(event) {
@@ -124,10 +125,12 @@ if (!('webkitSpeechRecognition' in window)) {
     }
     start_img.src =  dominio + 'img/mic2.png';
     test_input.value = final_span.innerHTML;
+    $('#puteada_mostrar').html(test_input.value)
     if(test_input.value == ''){
       showInfo('info_no_speech');
     }else{
       $('#siguiente').fadeIn(500).css('display', 'block');
+      $('#puteada_mostrar').fadeIn(500).css('display', 'block');
     }
     if (!final_transcript) {
       //showInfo('info_start');
@@ -191,6 +194,8 @@ function createEmail() {
 function startButton(event) {
   if (recognizing) {
     test_input.value = final_span.innerHTML;
+    puteada_mostrar.value = final_span.innerHTML;
+    $('#puteada_mostrar').html(test_input.value)
     recognition.stop();
     return;
   }

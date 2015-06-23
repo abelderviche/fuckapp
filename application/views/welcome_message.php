@@ -1,3 +1,15 @@
+<div class="red center" style="font-size:15px;color:white;">
+	<?php 
+		if(isset($_GET['error'])){
+			$error_obtenido = $_GET['error'];
+			if($error_obtenido == "palabra"){ 
+				echo "No se detecto ningun insulto. Dale descargate tranquilo!";
+			} else{
+				echo "No se ha detectado ninguna empresa, volv&eacute; a intentar!";
+			}
+		}
+	?>
+</div>
 <div id="container" class="container center">
 
 <!--
@@ -18,7 +30,7 @@
 
 
 
-
+	
 
 	
 <div class="row">
@@ -69,11 +81,12 @@
 	</div>
 
 		<div class="row ">
-			<div class="col s12 m6 offset-m3">
-	 			<a href="/manual" id="ingresar"><h2>INGRESAR MANUALMENTE</h2></a>
-	 		</div>
 	 		<div class="col s12 m6 offset-m3">
 	 			<input type="submit" value="SIGUIENTE" id="siguiente" class="siguiente" style="display:none;">
+	 			<div style="text-align:left;display:none;" id="puteada_mostrar"></div>
+	 		</div>
+			<div class="col s12 m6 offset-m3">
+	 			<a href="/manual" id="ingresar"><h2>INGRESAR MANUALMENTE</h2></a>
 	 		</div>
 	 		<div id="pasos">
 				 <img class="responsive-img" src="<?php echo asset_url(); ?>/img/paso-1.png" alt="">

@@ -15,11 +15,11 @@ class Welcome extends MY_Controller {
     /**
      * @whitelist true
      */
-	public function index()
-	{
-		$data = array();
-		$data["parametros"] = "parametro1";
-		$dataLayout = array();
+    public function index()
+    {
+        $data = array();
+        $data["parametros"] = "parametro1";
+        $dataLayout = array();
 
         $fb_config = array(
             'appId'  => '364289940434061',
@@ -46,9 +46,10 @@ class Welcome extends MY_Controller {
             $data['login_url'] = $this->facebook
                 ->getLoginUrl();
         }
+        
         $dataLayout["contenido"] = $this->load->view("welcome_message",$data,TRUE);
         $this->load->view("layout/default", $dataLayout);
-	}
+    }
 
     public function manual(){
         $data = array();
@@ -63,6 +64,11 @@ class Welcome extends MY_Controller {
         if ($this->input->post("finalizar") !== FALSE) {
             $palabras_clave = get_palabras_clave();
             $empresas = get_empresas();
+          /*  echo "<pre>";
+            print_r($empresas);
+            echo "</pre>"; 
+        */
+
             $valores["puteada"] = $this->input->post("problema");
             /*
             **  ACA CHEQUEAR SI PUTEADA TIENE PALABRA CLAVE Y EMPRESA. 
@@ -72,26 +78,77 @@ class Welcome extends MY_Controller {
             **  TAMBIEN AGREGAR EL ID EMPRESA A LA TABLA PUTEADA
             **  $valores["id_empresa"] = numero de id de empresa encontrada;
             */
-            $valores["id_empresa"] = 1; //HARDCODE
+            $valores["puteada"] = $this->_sanear_string(strtolower($valores["puteada"]));
+            $targets = array("edesur", "edenor", "telefonica", "claro", "movistar");
+
+            $empresas_search = join("|", array_column($empresas,'empresa'));
+            $puteadas_search = join("|", array_column($palabras_clave,'palabra'));
+            $matches = array();
+         
+            if ( preg_match('/' . $empresas_search . '/i',$valores["puteada"], $matches) ){
+              $empresa = $matches[0];
+              
+              $arrIt = new RecursiveIteratorIterator(new RecursiveArrayIterator($empresas));
+                foreach ($arrIt as $sub) {
+                    $subArray = $arrIt->getSubIterator();
+                    if ($subArray['empresa'] === $empresa) {
+                        $outputArray[] = iterator_to_array($subArray);
+                    }
+                }
+               
+               $empresa = $outputArray;
+               
+            }
+
+            if ( preg_match('/' . $puteadas_search . '/i',$valores["puteada"], $matches) ){
+              $puteada = $matches[0];
+              $arrIt = new RecursiveIteratorIterator(new RecursiveArrayIterator($palabras_clave));
+                foreach ($arrIt as $sub) {
+                    $subArray = $arrIt->getSubIterator();
+                    if ($subArray['palabra'] === $puteada) {
+                        $outputArray2[] = iterator_to_array($subArray);
+                    }
+                }
+               
+               $palabra = $outputArray2;
+            }
+
+            if(isset($empresa)){
+                echo "<pre>";
+                print_r($empresa);
+                echo "</pre><br>";
+            }else{
+                redirect("/index.php?error=empresa");
+            }
+            if(isset($palabra)){
+                echo "<pre>";
+                print_r($palabra);
+                echo "</pre><br>";
+            }else{
+                redirect("/index.php?error=palabra");
+            }
+
+           // $valores["id_empresa"] = 1; //HARDCODE
+            $valores["id_empresa"] = $empresa[0]['id_empresa'];
             $puteada = $this->_agregar($valores);
             $this->session->set_userdata(array('puteada' => $this->input->post("problema"),"id_puteada" => $puteada));
             redirect("/paso2");
         }
     }    
 
-	public function paso2(){
+    public function paso2(){
         //print_r($this->session->userdata);
         if ($this->session->userdata("puteada") == "") {
             redirect("/");
         }
-		$data = array();
+        $data = array();
         $data["parametros"] = "parametro1";
         $dataLayout = array();
         $data["page_id"] = "usuario_login";
         $this->load->view("usuario_login",$data,FALSE);
         //$dataLayout["contenido"] = $this->load->view("usuario_registro",$data,TRUE);
         //$this->load->view("layout/default", $dataLayout);
-	}
+    }
     public function paso2_registro(){
      //   print_r($this->session->userdata);
         if ($this->session->userdata("puteada") == "") {
@@ -198,5 +255,47 @@ class Welcome extends MY_Controller {
         if ( ! empty($datosUsuario)) {
             $this->session->set_data('usuario', $datosUsuario);
         }
+    }
+    private function _sanear_string($string){
+
+        $string = trim($string);
+
+        $string = str_replace(
+            array('á', 'à', 'ä', 'â', 'ª', 'Á', 'À', 'Â', 'Ä'),
+            array('a', 'a', 'a', 'a', 'a', 'A', 'A', 'A', 'A'),
+            $string
+        );
+
+        $string = str_replace(
+            array('é', 'è', 'ë', 'ê', 'É', 'È', 'Ê', 'Ë'),
+            array('e', 'e', 'e', 'e', 'E', 'E', 'E', 'E'),
+            $string
+        );
+
+        $string = str_replace(
+            array('í', 'ì', 'ï', 'î', 'Í', 'Ì', 'Ï', 'Î'),
+            array('i', 'i', 'i', 'i', 'I', 'I', 'I', 'I'),
+            $string
+        );
+
+        $string = str_replace(
+            array('ó', 'ò', 'ö', 'ô', 'Ó', 'Ò', 'Ö', 'Ô'),
+            array('o', 'o', 'o', 'o', 'O', 'O', 'O', 'O'),
+            $string
+        );
+
+        $string = str_replace(
+            array('ú', 'ù', 'ü', 'û', 'Ú', 'Ù', 'Û', 'Ü'),
+            array('u', 'u', 'u', 'u', 'U', 'U', 'U', 'U'),
+            $string
+        );
+
+        $string = str_replace(
+            array('ñ', 'Ñ', 'ç', 'Ç'),
+            array('n', 'N', 'c', 'C',),
+            $string
+        );
+
+        return $string;
     }
 }

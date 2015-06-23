@@ -1,23 +1,44 @@
-<div id="container" class="container center">
-<div class='carta'>
-                        <div class='cabecera'>
-                          <div class='fecha'><?=date("d/m/Y")?></div>
-                          <div class='lugar'><?=$datos["nombre"]?> <?=$datos["apellido"]?></div>
-                        </div>
-                        <div class='cuerpo'>
-                          <b>Señor presidente de <?=$datos["empresa"]?></b><br>
-                          Le comunico que hago absolutamente responsable a la empresa <b><?=$datos["empresa"]?></b> por la falta de previsión, 
-                          de mantenimiento y malas condiciones en que sostiene el tendido eléctrico.
-                          La falta de adecuación de infraestructura eléctrica con cableado de media tensión de más de 60 años frente al precedo de urbanización indiscriminado y desmedido sin planeamiento previo contribuyó al colapso y preanuncian situaciones más graves en el futuro.
-                          Del mismo modo hacemos civil y penalmente responsable a usted y a los funcionarios de la empresa que no han gestionado  y atendido la emergencia eléctrica dejando a extensas zonas
-                          sin suministro eléctrico.<br>
-                          Hago a la empresa responsable por los daños y perjuicios, daño moral, pérdidas materiales, inconvenientes y problema de salud que esta emergencia ocasionó sobretodo a las familias, niños de corta edad, personas mayores y/o enfermas, y lucro cesante por haber 
-                          imposibilitado a las personas cumplir con sus obligaciones laborales e impidió a empresas e instituciones trabajar o los obligó a recurrir a costosos equipos electrógenos para poder mínimamente continuar prestando servicios
-                          Por lo expuesto exijo e intimo a:<br>
-                          1º) Que en un plazo perentorio de 24 horas restablezca el servicio en forma estable y permanente.<br>
-                          2º) Un resarcimiento económico inmediato a todos los clientes damnificados.<br>
-                          3º) La realización de las obras necesarias que permitan a la población superar los cortes continuos y aseguren el suministro eléctrico.<br>
-                          4º) Se designe una audiencia a la que puedan concurrir los representantes de esta asociación así como damnificados a fin de evacuar las dudas correspondientes.<br>
-                          Reservo derechos.<br>
-                        </div>
-                      </div>
+<div id="container" class="container" style="background:#e0e0e0;font-size:14px">
+  <div class="row" >
+    <div class="col s12 " style="text-align:right;font-size:14px;font-weight:bold;"><?=date("d/m/Y")?></div>
+    <div class="col s12" style="font-size:14px;font-size:14px;font-weight:bold;">Sres. <?=ucfirst($datos["empresa"]);?> S.A.</div>
+
+    <div class="col s12 " style="text-align:justify;font-size:14px; ">
+      Concurro a efectos de manifiestar mi disconformidad respecto de
+      los términos en los que el servicio se encuentra siendo prestado.
+      <br><br>
+      Toda vez que, la situación descripta no resulta imputable a acción
+      u omisión alguna por esta parte, solicito, tenga a bien arbitrar
+      los medios necesarios para regularizar las condiciones de la
+      prestación del servicio en cuestion.
+      Sin otro particular.
+    </div>
+
+    <div class="col s12 " style="font-weight:bold;font-size:14px;"><br><?=$datos["nombre"]?> <?=$datos["apellido"]?></div>
+  </div>
+</div>
+  <div class="col s12">
+      <a href="https://twitter.com/share?url=http://www.puteapp.com/compartir/48" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" target="_blank" title="Compartir en Twitter"><span class="fa fa-twitter circle"></span></a>
+     <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.puteapp.com/compartir/48" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" target="_blank" title="Compartir en Facebook"><span class="fa fa-facebook circle"></span></a>
+      <meta property="og:title" content="Puteapp" />
+      <meta property="og:type" content="article" />
+      <meta property="og:image" content="<?php echo asset_url(); ?>/img/logo.png" />
+      <meta property="og:description" content="test" />
+  </div>
+  <style type="text/css">
+    .circle{
+      border-radius: 50%;
+      margin: 0.15em;
+      font-size: 3em;
+    }
+    .fa-twitter{
+      background: #4099FF;
+      color: #FFFFFF;
+      padding: 0.05em 0.07em;
+    }
+    .fa-facebook{
+      background: #3B5998;
+      color: #FFFFFF;
+      padding: 0.05em 0.3em;
+    } 
+  </style>

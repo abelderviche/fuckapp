@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Puteapp</title>
-
+        <link rel="stylesheet" href="<?php echo asset_url(); ?>/css/font-awesome.min.css">
         <link type="text/css" rel="stylesheet" href="<?php echo asset_url(); ?>/css/materialize.min.css"  media="screen,projection"/>
         <link type="text/css" rel="stylesheet" href="<?php echo asset_url(); ?>/css/stylematerialize.css"  media="screen,projection"/>
     </head>
