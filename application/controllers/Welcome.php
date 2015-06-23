@@ -150,8 +150,7 @@ class Welcome extends MY_Controller {
             if ((int) $id_usuario > 0) {
                 $idUsuarioLogueado = (int) $this->usuario_model->get_id_usuario();
                 $this->_llenar_datos_usuario($idUsuarioLogueado);
-                echo "ir a pagina ya logueado";
-                print_r($_SESSION);die;
+                redirect("/compartir/".$id_puteada);
             }
         } else {
            show_error("No se pudo procesar el pedido", "500", "Error");
