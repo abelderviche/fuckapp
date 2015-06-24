@@ -219,7 +219,7 @@ class Welcome extends MY_Controller {
             show_error("No se pudo procesar el pedido", "500", "Error");
         }
         $data = array();
-        $data["datos"] = get_datos_por_id($this->session->userdata('id_puteada'));
+        $data["datos"] = get_datos_por_id($id_puteada);
         $template = "carta_prueba";
         $dataLayout = array();
         $dataLayout["page_id"] = "compartir";
