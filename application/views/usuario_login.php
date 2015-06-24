@@ -11,6 +11,7 @@
         <link type="text/css" rel="stylesheet" href="<?php echo asset_url(); ?>/css/stylematerialize.css"  media="screen,projection"/>
  
     </head>
+    <?php echo print_r($user_profile, TRUE) ?>
 
     <body class="fondo">
 
@@ -25,7 +26,7 @@
         <div class="container">
         <div class="row">
             <div class="col s10 m6 offset-m3 offset-s1">
-               <button type="" id="login-fb" class="col s12"><i class="fa fa-facebook-official"></i> Login con Facebook</button>
+               <a href='<?=$login_url;?>' <button type="" id="login-fb" class="col s12"><i class="fa fa-facebook-official"></i> Login con Facebook</button></a>
                 <form method="POST" name="usuario_login" action="/usuario_login">
                     <input type="email" name="email" id="usuario"  placeholder="Email">
                     <input type="password" placeholder="Contraseña" name="contrasenia" id="pass" >
