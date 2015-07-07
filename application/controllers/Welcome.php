@@ -39,10 +39,11 @@ class Welcome extends MY_Controller {
         if ($this->input->post("finalizar") !== FALSE) {
             $palabras_clave = get_palabras_clave();
             $empresas = get_empresas();
+          
           /*  echo "<pre>";
-            print_r($empresas);
+            print_r($palabras_clave );
             echo "</pre>"; 
-        */
+        die();*/
 
             $valores["puteada"] = $this->input->post("problema");
             /*
@@ -53,13 +54,28 @@ class Welcome extends MY_Controller {
             **  TAMBIEN AGREGAR EL ID EMPRESA A LA TABLA PUTEADA
             **  $valores["id_empresa"] = numero de id de empresa encontrada;
             */
-            $valores["puteada"] = $this->_sanear_string(strtolower($valores["puteada"]));
+            $valores["puteada"] = $this->_sanear_string(strtolower(str_replace('*','-',$valores["puteada"])));
             $targets = array("edesur", "edenor", "telefonica", "claro", "movistar");
-
+        
+        
+            
+            
             $empresas_search = join("|", array_column($empresas,'empresa'));
-            $puteadas_search = join("|", array_column($palabras_clave,'palabra'));
+            $puteadas_search = join("|", array_column($palabras_clave ,'palabra'));
+           
+            /* BORRAR
+             echo $puteadas_search."<br>";
+            $puteada_test = array("puto", "la concha de tu madre", "la p que te pario", "claro", "movistar");
+            $puteadas_search = join("|", $puteada_test);
+                        echo $puteadas_search."<br>";   
+                      
+               
+               
+               echo $valores["puteada"];
+               echo "<br>".$puteadas_search;
+              */ 
             $matches = array();
-         
+            $matches2 = array();
             if ( preg_match('/' . $empresas_search . '/i',$valores["puteada"], $matches) ){
               $empresa = $matches[0];
               
@@ -74,13 +90,14 @@ class Welcome extends MY_Controller {
                $empresa = $outputArray;
                
             }
-
-            if ( preg_match('/' . $puteadas_search . '/i',$valores["puteada"], $matches) ){
-              $puteada = $matches[0];
+        
+            if ( preg_match('/' . str_replace('*','-',$puteadas_search) . '/i',$valores["puteada"], $matches2 ) ){
+              $puteada = $matches2[0];
+              
               $arrIt = new RecursiveIteratorIterator(new RecursiveArrayIterator($palabras_clave));
                 foreach ($arrIt as $sub) {
                     $subArray = $arrIt->getSubIterator();
-                    if ($subArray['palabra'] === $puteada) {
+                    if (str_replace('*','-',$subArray['palabra']) === $puteada) {
                         $outputArray2[] = iterator_to_array($subArray);
                     }
                 }
@@ -124,11 +141,12 @@ class Welcome extends MY_Controller {
             'appId'  => '364289940434061',
             'secret' => '4c5f1b726f910f981eaff9e2c8bd08ba'
         );
-
+    parse_str( $_SERVER['QUERY_STRING'], $_REQUEST );
         $this->load->library('facebook', $fb_config);
-
+    parse_str($_SERVER['QUERY_STRING'], $_REQUEST);
         $user = $this->facebook->getUser();
 
+    
 
         $this->load->model("usuario_model");        
         if ($user) {
@@ -158,7 +176,9 @@ class Welcome extends MY_Controller {
                     redirect("/compartir/".$id_puteada);
                 }
 
-        } 
+        } else{
+           // echo "error";
+        }
 
         if ($user) {
             $data['logout_url'] = $this->facebook
@@ -247,6 +267,7 @@ class Welcome extends MY_Controller {
         }
         $data = array();
         $data["datos"] = get_datos_por_id($id_puteada);
+        $data["id_puteada"] = $id_puteada;
         $template = "carta_prueba";
         $dataLayout = array();
         $dataLayout["page_id"] = "compartir";

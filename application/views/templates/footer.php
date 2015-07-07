@@ -1,4 +1,5 @@
-        <footer class="page-footer" style="background-color:#3b0a3b">
+        </main>
+        <footer class="page-footer" style="background-color:#3b0a3b;margin-bottom:0;">
           <div class="footer-copyright">
             <div class="container center">
             © 2014 Copyright Text

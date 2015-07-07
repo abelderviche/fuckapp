@@ -10,43 +10,23 @@
 		}
 	?>
 </div>
+
 <div id="container" class="container center">
 
-<!--
- 	<h1>Facebook stuff</h1>
-
-    <?php if (@$user_profile): ?>
-        <pre>
-            <?php echo print_r($user_profile, TRUE) ?>
-        </pre>
-        <a href="<?= $logout_url ?>">Logout</a>
-    <?php else: ?>
-        <h2>Welcome, please login below</h2>
-        <a href="<?= $login_url ?>">Login</a>
-    <?php endif; ?>
--->
-
-
-
-
-
-	
-
-	
 <div class="row">
-	<div class="col s10 center offset-s1">
+	<div class="col s6 center offset-s3">
 		<button id="start_button" onmousedown="startButton(event)" style="background:none;border:none;margin-top:20px;">
 			<img class="responsive-img" id="start_img" src="<?php echo asset_url(); ?>/img/mic2.png" alt="Start">
 		</button>
 	</div>
-	<div class="col s12 m6 offset-m3">
-		<h1>APRETA PARA GRABAR</h1>
+	<div class="col s12 m6 offset-m3 pressrec" >
+		APRETA PARA GRABAR
 	</div>
 </div>
 	
 <form id="form" method="POST" action="/manual_post">
 	<!-- mensajes de la aplicacion -->
-	<div id="info" style="text-align:center; font-size:14px;font-family: 'rawengulklight', sans-serif;">
+	<div id="info" style="text-align:center; font-weight:bold;font-size:16px;font-family: 'rawengulklight', sans-serif;display:block;">
 		<p id="info_start"></p>
 		<p id="info_speak_now">Hablá ahora. Volvé a apretar para pasar al siguiente paso</p>
 		<p id="info_no_speech">No se detecto ningun sonido. Talvez tengas que revisar
@@ -79,17 +59,19 @@
 		&nbsp;&nbsp;
 		<select id="select_dialect"></select>
 	</div>
-
 		<div class="row ">
+			<div class="col s8 offset-s2" id="voz">
+				 <img class="responsive-img" src="<?php echo asset_url(); ?>/img/onda.jpg" alt="" style="margin-bottom:10px;">
+			 </div>
 	 		<div class="col s12 m6 offset-m3">
 	 			<input type="submit" value="SIGUIENTE" id="siguiente" class="siguiente" style="display:none;">
-	 			<div style="text-align:left;display:none;" id="puteada_mostrar"></div>
+	 			<div style="text-align:left;min-height: 100px; margin-bottom:10px;display:none;" id="puteada_mostrar"></div>
 	 		</div>
 			<div class="col s12 m6 offset-m3">
 	 			<a href="/manual" id="ingresar"><h2>INGRESAR MANUALMENTE</h2></a>
 	 		</div>
 	 		<div id="pasos">
-				 <img class="responsive-img" src="<?php echo asset_url(); ?>/img/paso-1.png" alt="">
+				 <img class="responsive-img" src="<?php echo asset_url(); ?>/img/paso-1.png" alt="" style="margin-top:20px;">
 			</div>
  		</div>
  		

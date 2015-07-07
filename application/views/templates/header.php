@@ -14,11 +14,11 @@
          <nav>
             <div class="nav-wrapper" style="background-color:#290728;background: -moz-linear-gradient(top, #290728 0%, #3c0a3c 100%);">
                 <!-- <img src="<?php //echo asset_url(); ?>img/logo.png" alt="logo">-->
-                <a href="#" class="right" style="text-align: center; margin-right:10px;"><img height="50px" src="<?php echo asset_url(); ?>/img/logo.png" alt="logo"></a>
+                <a href="/" class="right" style="text-align: center; margin-right:10px;"><img height="45px" src="<?php echo asset_url(); ?>/img/logo.png" alt="logo"></a>
                 <ul id="nav-mobile" class="left">
                     <li><a href="" id="volver"><</a></li>
                 </ul>
             </div>
         </nav>
-
+<main>
     

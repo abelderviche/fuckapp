@@ -96,6 +96,7 @@ if (!('webkitSpeechRecognition' in window)) {
     //siguiente.style.display = 'none';
     $('#siguiente').hide(500);
     $('#puteada_mostrar').hide(500);
+    $('#voz').hide(500);
     start_img.src = dominio + 'img/mic2.gif';
   };
   recognition.onerror = function(event) {
@@ -131,6 +132,7 @@ if (!('webkitSpeechRecognition' in window)) {
     }else{
       $('#siguiente').fadeIn(500).css('display', 'block');
       $('#puteada_mostrar').fadeIn(500).css('display', 'block');
+      $('#voz').fadeIn(500).css('display', 'block');
     }
     if (!final_transcript) {
       //showInfo('info_start');
@@ -218,8 +220,10 @@ function showInfo(s) {
       }
     }
     info.style.visibility = 'visible';
+    info.style.height = 'auto';
   } else {
     info.style.visibility = 'hidden';
+    info.style.height = '0px';
   }
 }
 var current_style;

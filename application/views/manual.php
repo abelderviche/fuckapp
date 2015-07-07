@@ -5,7 +5,7 @@
       <h1 id="h1-ingreso" style="margin:0px;">INGRESO MANUAL</h1>
       <hr class="col s4 offset-s4 negro">
       <textarea  name="problema" id="problema" required class="col s12 m10 offset-m1" name=""  style="margin-top:10px;" value="PUTEA AQUÍ"></textarea>
-     <button  class="siguiente col s6 offset-s3 " type="submit" name="finalizar" href="#">SIGUIENTE</button>
+     <button  class="siguiente col s12 m6 offset-m3" type="submit" name="finalizar" href="#" style="margin-top:10px;">SIGUIENTE</button>
     <div id="pasos" class="col s12 m10 offset-m2">
          <img class="responsive-img" src="<?php echo asset_url(); ?>/img/paso-2.png" alt="">
     </div>

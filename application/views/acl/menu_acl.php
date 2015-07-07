@@ -9,7 +9,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/acl"><img src="/assets/acl/img/logo.png" /></a>
+        <a class="navbar-brand" href="/acl" ><img src="/assets/acl/img/logo.png" /></a>
     </div>
 
     <!-- Agrupar los enlaces de navegación, los formularios y cualquier

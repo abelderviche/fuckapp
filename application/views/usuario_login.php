@@ -15,24 +15,37 @@
 
     <body class="fondo">
 
-        <div class="row">
-            <div class="col s4 m6 center offset-s4  offset-m3">
+<?php   if ($this->input->get("respuesta")) {
+             $respuesta = $this->input->get("respuesta");
+            if ($respuesta === "credenciales") { ?>
+                <div class="red center" style="font-size:1.4em;color:white;">
+                 ¡Error!<br> El usuario o la contrase&ntilde;a no son v&aacute;lidos.
+                </div>
+             <?php }
+        }     ?>
+       <div class="container">
+
+
+        <div class="row center">
+            <div class="col s4 m2  offset-s4 offset-m5" style="margin-top:20px;">
                 <img class="responsive-img" id="start_img" src="<?php echo asset_url(); ?>/img/logo.png" alt="Start">
             </div>
-            <h1 id="puteapp">PuteApp</h1>
-            <hr class="col s2 offset-s5">
+            <div class="col s12 m6 center offset-m3" id="puteapp">
+                Anger Traslator
+              </div>
+        </div>
         </div>
             
         <div class="container">
         <div class="row">
-            <div class="col s10 m6 offset-m3 offset-s1">
+            <div class="col s12 m6 offset-m3">
                <a href='<?=$login_url;?>' <button type="" id="login-fb" class="col s12"><i class="fa fa-facebook-official"></i> Login con Facebook</button></a>
                 <form method="POST" name="usuario_login" action="/usuario_login">
                     <input type="email" name="email" id="usuario"  placeholder="Email">
                     <input type="password" placeholder="Contraseña" name="contrasenia" id="pass" >
                     <button id="login"  type="submit" name="entrar" type="" class="col s12 ">Login</button>
                 </form>
-                    <a href='/paso2_registro'><button   type="submit" name="entrar" type="" class="col s12 registro">Registro</button></a>
+                    <a href='/paso2_registro'><button   type="submit" name="entrar" type="" class="col s12 registro">Nuevo Usuario</button></a>
             </div>
         </div>
         </div>
@@ -54,13 +67,6 @@
 
 
 
-
-<?php   if ($this->input->get("respuesta")) {
-             $respuesta = $this->input->get("respuesta");
-            if ($respuesta === "credenciales") { ?>
-               <div class="alert alert-danger" role="alert"><strong>Error! </strong> El usuario o la contrase&ntilde;a no son v&aacute;lidos.</div>
-             <?php }
-        }     ?>
 
 <!--
 <h2><a href="#" id="ver_login">Ingreso</a> / <a href="#" class="activo" id="ver_registro">Registro</a></h2>
