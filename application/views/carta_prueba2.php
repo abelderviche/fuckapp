@@ -2,18 +2,16 @@
   <div class="row" >
     <div class="col s12 " style="text-align:right;font-size:14px;font-weight:bold;"><?=date("d/m/Y")?></div>
     <div class="col s12" style="font-size:14px;font-size:14px;font-weight:bold;">Sres. <?=ucfirst($datos["empresa"]);?> S.A.</div>
-
-    <div class="col s12 " style="text-align:justify;font-size:14px; ">
-      Concurro a efectos de manifiestar mi disconformidad respecto de
-      los términos en los que el servicio se encuentra siendo prestado.
-      <br><br>
-      Toda vez que, la situación descripta no resulta imputable a acción
-      u omisión alguna por esta parte, solicito, tenga a bien arbitrar
-      los medios necesarios para regularizar las condiciones de la
-      prestación del servicio en cuestion.
-      Sin otro particular.
-    </div>
-
+      <div class="col s12 " style="text-align:justify;font-size:14px; ">
+        A través de la presente comunico a usted mi disconformidad 
+        con respecto a las condiciones actuales de la prestación del servicio.
+        <br><br>
+        Espero contar con su respaldo y  por ende con una pronta solución a los inconvenientes que esta situación manifiesta. <br>
+        En caso de silencio, procederé a llevar a cabo ante la Oficina de Protección al Consumidor, el trámite de rigor.<br>
+        Quedo a la espera de su respuesta y agradezco desde ya la atención a mi solicitud.<br>
+        <br>
+        Sin otro particular. 
+      </div>
     <div class="col s12 " style="font-weight:bold;font-size:14px;"><br><?=$datos["nombre"]?> <?=$datos["apellido"]?></div>
   </div>
 </div>

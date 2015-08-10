@@ -14,8 +14,8 @@
 <div id="container" class="container center">
 
 <div class="row">
-	<div class="col s6 center offset-s3">
-		<button id="start_button" onmousedown="startButton(event)" style="background:none;border:none;margin-top:20px;">
+	<div class="col s8 center offset-s2">
+		<button id="start_button" onmousedown="startButton(event)" style="background:none;border:none;margin-top:10px;">
 			<img class="responsive-img" id="start_img" src="<?php echo asset_url(); ?>/img/mic2.png" alt="Start">
 		</button>
 	</div>

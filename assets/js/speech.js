@@ -97,7 +97,7 @@ if (!('webkitSpeechRecognition' in window)) {
     $('#siguiente').hide(500);
     $('#puteada_mostrar').hide(500);
     $('#voz').hide(500);
-    start_img.src = dominio + 'img/mic2.gif';
+    start_img.src = dominio + 'img/mic.gif';
   };
   recognition.onerror = function(event) {
     if (event.error == 'no-speech') {
@@ -167,7 +167,7 @@ if (!('webkitSpeechRecognition' in window)) {
       
       showButtons('inline-block');
 
-      start_img.src =  dominio + 'img/mic2.gif';
+      start_img.src =  dominio + 'img/mic.gif';
     }
   };
 }

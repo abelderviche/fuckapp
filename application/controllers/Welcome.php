@@ -268,7 +268,8 @@ class Welcome extends MY_Controller {
         $data = array();
         $data["datos"] = get_datos_por_id($id_puteada);
         $data["id_puteada"] = $id_puteada;
-        $template = "carta_prueba";
+        $entrada = array("carta_prueba", "carta_prueba2", "carta_prueba3", "carta_prueba4");
+        $template = $entrada[array_rand($entrada)];
         $dataLayout = array();
         $dataLayout["page_id"] = "compartir";
         $dataLayout["contenido"] = $this->load->view($template,$data,TRUE);
