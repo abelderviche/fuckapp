@@ -14,14 +14,13 @@ class Welcome extends MY_Controller {
     }   
     /**
      * @whitelist true
-     */
+    */
     public function index()
     {
         $data = array();
         $data["parametros"] = "parametro1";
         $dataLayout = array();
 
-        
         $dataLayout["contenido"] = $this->load->view("welcome_message",$data,TRUE);
         $this->load->view("layout/default", $dataLayout);
     }
@@ -40,10 +39,7 @@ class Welcome extends MY_Controller {
             $palabras_clave = get_palabras_clave();
             $empresas = get_empresas();
           
-          /*  echo "<pre>";
-            print_r($palabras_clave );
-            echo "</pre>"; 
-        die();*/
+          
 
             $valores["puteada"] = $this->input->post("problema");
             /*
@@ -55,7 +51,8 @@ class Welcome extends MY_Controller {
             **  $valores["id_empresa"] = numero de id de empresa encontrada;
             */
             $valores["puteada"] = $this->_sanear_string(strtolower(str_replace('*','-',$valores["puteada"])));
-            $targets = array("edesur", "edenor", "telefonica", "claro", "movistar");
+            echo  $valores["puteada"];
+            //$targets = array("edesur", "edenor", "telefonica", "claro", "movistar");
         
         
             
@@ -63,17 +60,6 @@ class Welcome extends MY_Controller {
             $empresas_search = join("|", array_column($empresas,'empresa'));
             $puteadas_search = join("|", array_column($palabras_clave ,'palabra'));
            
-            /* BORRAR
-             echo $puteadas_search."<br>";
-            $puteada_test = array("puto", "la concha de tu madre", "la p que te pario", "claro", "movistar");
-            $puteadas_search = join("|", $puteada_test);
-                        echo $puteadas_search."<br>";   
-                      
-               
-               
-               echo $valores["puteada"];
-               echo "<br>".$puteadas_search;
-              */ 
             $matches = array();
             $matches2 = array();
             if ( preg_match('/' . $empresas_search . '/i',$valores["puteada"], $matches) ){
@@ -86,14 +72,11 @@ class Welcome extends MY_Controller {
                         $outputArray[] = iterator_to_array($subArray);
                     }
                 }
-               
                $empresa = $outputArray;
-               
             }
         
             if ( preg_match('/' . str_replace('*','-',$puteadas_search) . '/i',$valores["puteada"], $matches2 ) ){
               $puteada = $matches2[0];
-              
               $arrIt = new RecursiveIteratorIterator(new RecursiveArrayIterator($palabras_clave));
                 foreach ($arrIt as $sub) {
                     $subArray = $arrIt->getSubIterator();
@@ -189,12 +172,12 @@ class Welcome extends MY_Controller {
                    'scope' => 'email'
                  ));
         }
-        
+        /*
 
         $data["page_id"] = "usuario_login";
-        $this->load->view("usuario_login",$data,FALSE);
-        //$dataLayout["contenido"] = $this->load->view("usuario_registro",$data,TRUE);
-        //$this->load->view("layout/default", $dataLayout);
+        $this->load->view("usuario_login",$data,FALSE);*/
+        $dataLayout["contenido"] = $this->load->view("usuario_login",$data,TRUE);
+        $this->load->view("layout/default", $dataLayout);
     }
     public function paso2_registro(){
      //   print_r($this->session->userdata);

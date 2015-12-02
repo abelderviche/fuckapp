@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+    link(rel="stylesheet", href="css/styles.css")
+    title Puteapp
+  body
+    header
+      .ed-container.full
+        .ed-item(data='menu').justify
+          span#back
+            a(href='#grabar').icon-izquierda
+          span#btn.icon-menu
+        .ed-item(data='nav').no-padding
+          nav.menu
+            figure
+              img(src="img/logo.svg", alt="")
+            ul
+              li 
+                a(href="index.html") VOLVER
+              li 
+                a(href="terminos.html") TERMINOS Y CONDICIONES
+              li 
+                a(href="creditos.html") CREDITOS
+    main
+      article#login2
+        .ed-container.abcenter.main
+          .ed-item
+            figure(alt="User")
+        .ed-container.abcenter
+          .ed-item
+            form(action="/usuario",method='POST') 
+              input(type="text",placeholder='Username')
+              input(type="mail",placeholder='Email') 
+              input(type="password",placeholder='Password')
+              input(type="password",placeholder='Pass Repeat') 
+              input(type="submit", value="Create User")
+        .ed-container.abcenter.justify.hastaFondo.full
+          .ed-item
+            a(href="terminos.html") términos y condiciones
+  script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")
+  script(src="js/viewport.js")
+  script(src="js/scripts.js")
+ 

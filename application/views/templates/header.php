@@ -1,24 +1,30 @@
+
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Puteapp</title>
-        <link rel="stylesheet" href="<?php echo asset_url(); ?>/css/font-awesome.min.css">
-        <link type="text/css" rel="stylesheet" href="<?php echo asset_url(); ?>/css/materialize.min.css"  media="screen,projection"/>
-        <link type="text/css" rel="stylesheet" href="<?php echo asset_url(); ?>/css/stylematerialize.css"  media="screen,projection"/>
-    </head>
-    <body id="<?php echo isset($page_id) ? $page_id : ""; ?>">
-    <?php $this->load->view("layout/menu"); ?>
-         <nav>
-            <div class="nav-wrapper" style="background-color:#290728;background: -moz-linear-gradient(top, #290728 0%, #3c0a3c 100%);">
-                <!-- <img src="<?php //echo asset_url(); ?>img/logo.png" alt="logo">-->
-                <a href="/" class="right" style="text-align: center; margin-right:10px;"><img height="45px" src="<?php echo asset_url(); ?>/img/logo.png" alt="logo"></a>
-                <ul id="nav-mobile" class="left">
-                    <li><a href="" id="volver"><</a></li>
-                </ul>
-            </div>
-        </nav>
-<main>
-    
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="<?php echo asset_url(); ?>/css/styles.css"/>
+    <title>Puteapp</title>
+  </head>
+  <body  id="<?php echo isset($page_id) ? $page_id : ""; ?>">
+    <div class="loader">
+      <figure><img src="<?php echo asset_url(); ?>/img/logo.svg" alt="logo"/></figure>
+    </div>
+    <header>
+      <div class="ed-container full">
+        <div data="menu" class="ed-item justify"><span id="back"><a href="#grabar" class="icon-izquierda"></a></span><span id="btn" class="icon-menu"></span></div>
+        <div data="nav" class="ed-item no-padding">
+          <nav class="menu">
+            <figure><img src="<?php echo asset_url(); ?>/img/logo.svg" alt=""/></figure>
+            <ul>
+              <li> <a href="#grabar">GRABAR</a></li>
+              <li> <a href="#manual">AYUDA</a></li>
+              <li> <a href="#">TERMINOS Y CONDICIONES</a></li>
+              <li> <a href="#login">CREDITOS</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>    

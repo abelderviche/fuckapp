@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+    link(rel="stylesheet", href="css/styles.css")
+    title Puteapp
+  body
+    .loader
+      figure
+        img(src="img/logo.svg", alt="logo")
+    header
+      .ed-container.full
+        .ed-item(data='menu').justify
+          span#back
+            a(href='#grabar').icon-izquierda
+          span#btn.icon-menu
+        .ed-item(data='nav').no-padding
+          nav.menu
+            figure
+              img(src="img/logo.svg", alt="")
+            ul
+              li 
+                a(href="#grabar") GRABAR
+              li 
+                a(href="#manual") AYUDA
+              li 
+                a(href="#") TERMINOS Y CONDICIONES
+              li 
+                a(href="#login") CREDITOS
+    main
+      section#section
+        article#grabar
+          .ed-container.abcenter.main
+            .ed-item
+              figure(alt="logo")
+                img(src="img/logo.svg", alt="")
+            .ed-item
+              figure
+                img#pasos(src="img/pasos1.svg", alt="")
+          .ed-container.abcenter
+            .ed-item
+              figure(alt="micro")
+                img(src="img/micro.svg")
+            .ed-item
+              p Apretá el mic y seleccioná “permitir” para comenzar a grabar
+          .ed-container.abcenter
+            .ed-item
+              button#btnManual
+                a(href='#manual').icon-derecha.espacio Ingresar Manualmente
+        article#manual
+          .ed-container.abcenter.main
+            .ed-item
+              figure(alt="logo")
+                img(src="img/logo.svg", alt="")
+            .ed-item
+              figure
+                img#pasos(src="img/pasos1.svg", alt="")
+          .ed-container.abcenter
+            .ed-item
+              form(action="/manual_post",id='form',method='POST')
+                span.input.input--jiro
+                  textarea#input-10.input__field.input__field--jiro(type="text",required)
+                  label.input__label.input__label--jiro(for="input-10")
+                    span.input__label-content.input__label-content--jiro
+                      | Escribe aquí
+                button SIGUIENTE
+        article#login
+          .ed-container.abcenter.main
+            .ed-item
+              figure(alt="logo")
+                img(src="img/logo.svg", alt="")
+            .ed-item
+              figure
+                img#pasos(src="img/pasos2.svg", alt="")
+          .ed-container.abcenter
+            .ed-item
+              button
+                span.icon-facebook.espacio 
+                | Login con facebook
+              form(action="/usuario",method='POST') 
+                input(type="text",placeholder='Username') 
+                input(type="password",placeholder='Password') 
+                input(type="submit", value="Login")
+          .ed-container.abcenter.justify.hastaFondo.full
+            .ed-item.base-50
+              a(href="crear.html") crear una cuenta
+            .ed-item.base-50
+              a(href="terminos.html") términos y condiciones
+
+            
+
+
+  script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")
+  script(src="js/viewport.js")
+  script(src="js/scripts.js")
+ 
