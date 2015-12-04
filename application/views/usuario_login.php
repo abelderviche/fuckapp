@@ -13,7 +13,7 @@
                <form method="POST" name="usuario_login" action="/usuario_login">
                 <input type="email" name="email" id="usuario" placeholder="Email"/>
                 <input type="password" placeholder="Password" name="contrasenia" id="pass"/>
-                <input  type="submit" name="entrar" value="Login"/>
+                <input type="submit" name="entrar" value="Login"/>
               </form>
             </div>
           </div>

@@ -4161,3 +4161,32 @@ main {
     background-position: 2% 50%;
   }
 }
+.none{
+  display: none;
+}
+
+[atributoX]{
+  display: none;
+  max-width: 480px;
+  width: 80%;
+  border-radius: 50px;
+  border: none;
+  color: white;
+  line-height: 4;
+  background: #D75527;
+  position: absolute;
+  left:0;
+  right: 0;
+  margin: auto;
+  
+  -webkit-transform: translateY(60vh);
+}
+.microfono{
+  outline:0;
+background: transparent;
+  border:none;
+  margin-top:10px;
+}
+.microfono:hover{
+  background: transparent;
+}

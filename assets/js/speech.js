@@ -1,4 +1,4 @@
-var langs =
+/*var langs =
 [['Afrikaans',       ['af-ZA']],
  ['Bahasa Indonesia',['id-ID']],
  ['Bahasa Melayu',   ['ms-MY']],
@@ -233,4 +233,4 @@ function showButtons(style) {
   }
   current_style = style;
   copy_button.style.display = style;
-}
+}*/
