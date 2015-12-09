@@ -4027,7 +4027,8 @@ main {
 }
 
 #login button,
-#login2 button {
+#login2 button,
+#login a.facebook {
   max-width: 475px;
   text-align: center;
   margin-top: 1.5rem;
@@ -4041,10 +4042,14 @@ main {
 }
 
 #login button span,
-#login2 button span {
+#login2 button span,
+#login a.facebook span {
   font-size: 1.6em;
   line-height: 0;
   margin-left: -5%;
+}
+#login a.facebook{
+  display: block;
 }
 
 #login .hastaFondo,
@@ -4079,8 +4084,9 @@ main {
   text-align: center;
 }
 
-#login form input[placeholder="Username"],
-#login2 form input[placeholder="Username"] {
+#login form input[placeholder="Nombre"],
+#login2 form input[placeholder="Nombre"],
+#login2 form input[placeholder="Apellido"] {
   background: url(../img/user.png) no-repeat, #a6a6a8;
 }
 
@@ -4099,22 +4105,23 @@ main {
   background: url(../img/pass.png) no-repeat, #a6a6a8;
 }
 
-#login form input[value="Create User"],
-#login2 form input[value="Create User"] {
+#login form input[value="Crear Usuario"],
+#login2 form input[value="Crear Usuario"] {
   background: url(../img/flecha2.png) no-repeat, #F2652F;
   border: 1px solid #c8400d;
   color: white;
 }
 
-#login form input[placeholder="Username"],
+#login form input[placeholder="Nombre"],
 #login form input[placeholder="Password"],
 #login form input[placeholder="Email"],
-#login form input[value="Create User"],
+#login form input[value="Crear Usuario"],
 #login form input[placeholder="Pass Repeat"],
-#login2 form input[placeholder="Username"],
+#login2 form input[placeholder="Nombre"],
 #login2 form input[placeholder="Password"],
 #login2 form input[placeholder="Email"],
-#login2 form input[value="Create User"],
+#login2 form input[value="Crear Usuario"],
+#login2 form input[placeholder="Apellido"], 
 #login2 form input[placeholder="Pass Repeat"] {
   background-position: 25% 50%;
   border: none;
@@ -4142,15 +4149,16 @@ main {
 }
 
 @media screen and (min-width: 480px) {
-  #login form input[placeholder="Username"],
+  #login form input[placeholder="Nombre"],
   #login form input[placeholder="Password"],
   #login form input[placeholder="Email"],
-  #login form input[value="Create User"],
+  #login form input[value="Crear Usuario"],
   #login form input[placeholder="Pass Repeat"],
-  #login2 form input[placeholder="Username"],
+  #login2 form input[placeholder="Nombre"],
   #login2 form input[placeholder="Password"],
   #login2 form input[placeholder="Email"],
-  #login2 form input[value="Create User"],
+  #login2 form input[value="Crear Usuario"],
+  #login2 form input[placeholder="Apellido"], 
   #login2 form input[placeholder="Pass Repeat"] {
     background-position: 35% 50%;
     border: none;
@@ -4189,21 +4197,4 @@ background: transparent;
 }
 .microfono:hover{
   background: transparent;
-}
-#login a{
-  max-width: 475px;
-  text-align: center;
-  margin-top: 1.5rem;
-  width: 100%;
-  background-color: #3a589e;
-  border-radius: 50px;
-  border: 1px solid transparent;
-  color: white;
-  margin-bottom: 2em;
-  line-height: 4;
-}
-#login a span{
-  font-size: 1.6em;
-  line-height: 0;
-  margin-left: -5%;
 }

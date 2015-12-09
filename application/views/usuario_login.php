@@ -9,9 +9,8 @@
           </div>
           <div class="ed-container abcenter">
             <div class="ed-item">
-              <a href='<?=$login_url;?>'><span class="icon-facebook espacio"> </span>Login con facebook</a>
-              <button>facebook</button>
-               <form method="POST" name="usuario_login" action="/usuario_login">
+              <a  class='facebook' href='<?=$login_url;?>'><span class="icon-facebook espacio"> </span>Login con facebook</a>
+               <form method="POST" name="usuario_login" action="<?=base_url();?>usuario_login">
                 <input type="email" name="email" id="usuario" placeholder="Email"/>
                 <input type="password" placeholder="Password" name="contrasenia" id="pass"/>
                 <input type="submit" name="entrar" value="Login"/>
@@ -19,7 +18,7 @@
             </div>
           </div>
           <div class="ed-container abcenter justify hastaFondo full">
-            <div class="ed-item base-50"><a href='/paso2_registro'>Crear una cuenta</a></div>
+            <div class="ed-item base-50"><a href='<?=base_url();?>paso2_registro'>Crear una cuenta</a></div>
             <div class="ed-item base-50"><a href="terminos.html">Términos y condiciones</a></div>
           </div>
         </article>

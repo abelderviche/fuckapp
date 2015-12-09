@@ -1,3 +1,32 @@
+<article id="login2">
+  <div class="ed-container abcenter main">
+    <div class="ed-item">
+      <figure alt="User"></figure>
+    </div>
+  </div>
+  <div class="ed-container abcenter">
+    <div class="ed-item">
+      <form action="<?=base_url();?>usuario_registro" method="POST"> 
+        <input type="text" placeholder="Nombre"         name="nombre" />
+        <input type="text" placeholder="Apellido"       name="apellido" />
+        <input type="email" placeholder="Email"         name="email"/>
+        <input type="password" placeholder="Password"   name="contrasenia"/>
+        
+        <input type="submit" value="Crear Usuario"/>
+      </form>
+    </div>
+  </div>
+  <div class="ed-container abcenter justify hastaFondo full">
+    <div class="ed-item"><a href="terminos.html">términos y condiciones</a></div>
+  </div>
+</article>
+
+
+
+
+
+<!--
+
  <div class="container" style="margin-top:10px;">
      
   <div class="row">
@@ -16,3 +45,4 @@
     </form>
 </div>
  </div> 
+-->

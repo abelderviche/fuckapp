@@ -12,7 +12,7 @@ $(function(){
 	var $back 			= $("#back");
 	var $grabar         = $("#grabar");
 	var $imgPasos       = $("#pasos");
-	//var $inputVal       = $("[method='POST']").children("[placeholder]").css('background-position').substr(0,7);
+	var $inputVal       = $("[method='POST']").children("[placeholder]").css('background-position');
 	var $topMicro;
 	var objForm = {
 		form : $("[method='POST']"),
@@ -83,7 +83,7 @@ $(function(){
 		$body.removeClass("microBack");
 		$btnMensaje.css({"min-height":"0"});
 	});
-	//campo(objForm);
+	campo(objForm);
 
 	var langs =
 		[['Afrikaans',       ['af-ZA']],

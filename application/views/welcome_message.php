@@ -54,7 +54,7 @@
           </div>
         </article>
         <article id="grabado">
-			<form id="form" method="POST" action="/manual_post">
+			<form id="form" method="POST" action="<?=base_url();?>manual_post">
 				<!-- texto hablado por mic * OCULTO * -->
 				<div id="results" class="none">
 					<span id="final_span" class="final"></span>
@@ -93,7 +93,7 @@
             <div class="ed-item">
               <form action="<?=base_url();?>manual_post" id="form" method="POST">
               	<span class="input input--jiro">
-                  <textarea name="problema" id="problema" id="input-10" type="text" required="required" class="input__field input__field--jiro"></textarea>
+                  <textarea name="problema" id="input-10" type="text" required="required" class="input__field input__field--jiro"></textarea>
                   <label for="input-10" class="input__label input__label--jiro"><span class="input__label-content input__label-content--jiro">Escribe aquí</span></label></span>
                 <button>SIGUIENTE</button>
               </form>
