@@ -10,6 +10,7 @@
           <div class="ed-container abcenter">
             <div class="ed-item">
               <a href='<?=$login_url;?>'><span class="icon-facebook espacio"> </span>Login con facebook</a>
+              <button>facebook</button>
                <form method="POST" name="usuario_login" action="/usuario_login">
                 <input type="email" name="email" id="usuario" placeholder="Email"/>
                 <input type="password" placeholder="Password" name="contrasenia" id="pass"/>
