@@ -23,7 +23,7 @@
         <script src="/assets/acl/jquery-ui/jquery-ui.min.js"></script>
 
     </head>
-    <body  <?php echo isset($id_pagina) ? "id={$id_pagina}" : ""; ?>>
+    <body  <?php echo isset($id_pagina) ? "id={$id_pagina}" : ""; ?>  class="grey lighten-2">
         <div class="container">
             <?php if (FALSE === isset($no_mostrar_menu)) : ?>
                 <?php $this->load->view("acl/menu_acl"); ?>

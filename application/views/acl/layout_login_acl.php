@@ -16,7 +16,7 @@
         <script src="<?php echo asset_url(); ?>js/jquery-2.1.4.min.js" type="text/javascript"></script>
         <script src="<?php echo asset_url(); ?>js/materialize.min.js" type="text/javascript"></script>
     </head>
-    <body class="body-login">
+    <body class="body-login grey lighten-2">
         <div class="container">
             <?php
             if (isset($contenido)) {
