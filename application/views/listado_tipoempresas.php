@@ -3,7 +3,7 @@ $tipos_empresa = get_tipo_empresa();
 ?>
 <div class="row">
   <div class="col s12 m6 offset-m3">
-    <h2 class="deep-purple-text accent-1">Tipos de Empresa</h2>
+    <h2 class="deep-orange-text accent-1">Tipos de Empresa</h2>
     <div class="divider" style="margin-bottom:20px;"></div>
   </div>
 </div>
@@ -18,7 +18,7 @@ $tipos_empresa = get_tipo_empresa();
 </div>  
   
 <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
-    <a class="btn-floating btn-large deep-purple darken-1 modal-trigger" href="#modal2">
+    <a class="btn-floating btn-large deep-orange darken-1 modal-trigger" href="#modal2">
       <i class="large mdi-content-add"></i>
     </a>
 </div>
@@ -34,7 +34,7 @@ $tipos_empresa = get_tipo_empresa();
         </div>
   </div>
   <div class="modal-footer">
-    <a href="#!" class="modal-action-done waves-effect waves-purple btn-flat"><i class="large mdi-action-done right"></i> DONE </a>
+    <a href="#!" class="modal-action-done waves-effect waves-orange btn-flat"><i class="large mdi-action-done right"></i> DONE </a>
   </div>
 </div>
 

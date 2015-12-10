@@ -1,0 +1,296 @@
+
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:700);
+@font-face {
+    font-family: 'rawengulkbold';
+    src: url('fonts/rawengulkbold-webfont.eot');
+    src: url('fonts/rawengulkbold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/rawengulkbold-webfont.woff2') format('woff2'),
+         url('fonts/rawengulkbold-webfont.woff') format('woff'),
+         url('fonts/rawengulkbold-webfont.ttf') format('truetype'),
+         url('fonts/rawengulkbold-webfont.svg#rawengulkbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'rawengulklight';
+    src: url('fonts/rawengulklight-webfont.eot');
+    src: url('fonts/rawengulklight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/rawengulklight-webfont.woff2') format('woff2'),
+         url('fonts/rawengulklight-webfont.woff') format('woff'),
+         url('fonts/rawengulklight-webfont.ttf') format('truetype'),
+         url('fonts/rawengulklight-webfont.svg#rawengulklight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'rawengulkpcsregular';
+    src: url('fonts/rawengulkpcs-webfont.eot');
+    src: url('fonts/rawengulkpcs-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/rawengulkpcs-webfont.woff2') format('woff2'),
+         url('fonts/rawengulkpcs-webfont.woff') format('woff'),
+         url('fonts/rawengulkpcs-webfont.ttf') format('truetype'),
+         url('fonts/rawengulkpcs-webfont.svg#rawengulkpcsregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+        border:none;
+        font-size: 10px;
+    }
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.cleaner{
+  clear: both;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+nav #volver{
+    color: white;
+    text-decoration: none;
+    font-size: 4.9em;
+    font-weight: 700;
+}
+
+.pressrec{
+    font-family: 'rawengulklight', sans-serif;
+    color:#909090;
+    margin: auto;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+}
+#container h2{
+    font-family: 'rawengulklight', sans-serif;
+    color:#ff3500;
+    border: 1px solid #ff3500;
+    border-radius: 5px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 10px;
+    font-size: 1.4em;
+    line-height: 2.916rem; 
+    font-weight: bold;
+}
+
+#container h3{
+    font-family: 'rawengulklight', sans-serif;
+    color:#fff;
+    background: #ff2700; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ff2700 0%, #ff5e07 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff2700), color-stop(100%,#ff5e07)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #ff2700 0%,#ff5e07 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #ff2700 0%,#ff5e07 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #ff2700 0%,#ff5e07 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #ff2700 0%,#ff5e07 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff2700', endColorstr='#ff5e07',GradientType=0 ); /* IE6-9 */
+    border-radius: 5px;
+    padding: 1em;
+    text-align: center;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.siguiente{
+  font-family: 'rawengulklight', sans-serif;
+  color: #fff;
+  background: #ff2700;
+  background: -moz-linear-gradient(top, #ff2700 0%, #ff5e07 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff2700), color-stop(100%,#ff5e07));
+  background: -webkit-linear-gradient(top, #ff2700 0%,#ff5e07 100%);
+  background: -o-linear-gradient(top, #ff2700 0%,#ff5e07 100%);
+  background: -ms-linear-gradient(top, #ff2700 0%,#ff5e07 100%);
+  background: linear-gradient(to bottom, #ff2700 0%,#ff5e07 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff2700', endColorstr='#ff5e07',GradientType=0 );
+  border-radius: 5px;
+text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.4em;
+    line-height: 2.916rem; 
+    font-weight: bold;
+    width: 100%;
+}
+
+#login-fb{
+  background-color: #3a589e;
+  color: white;
+  font-size: 1.7em;
+  text-align: center;
+  padding: 10px;
+  border-radius: 2px;
+  margin-bottom: 25px;
+
+}
+
+#h1-usuario{
+  background-color: #ebebeb; 
+  color: #6e6e6e;
+  font-size: 3em;
+  line-height: 2em;
+  text-align: center;
+  font-family: 'rawengulkbold', sans-serif;
+}
+
+#email, #pass2, #pass3,#nombre_registro,#apellido_registro{
+  background-color: #ebebeb; 
+  color: #999;
+  font-size: 2em;
+  border:none;
+  padding-left: 10px;
+  font-family: 'rawengulkbold', sans-serif;
+  box-sizing:border-box;
+}
+
+::-webkit-input-placeholder{ color: #999;}
+:-moz-placeholder{ color: #999;  }
+::-moz-placeholder{color: #999; }
+:-ms-input-placeholder{color: #999;  }
+
+
+#submit-listo{
+  background-color: #8bc613;
+  color: white;
+  font-family: 'rawengulkbold', sans-serif;
+  text-align: center;
+  font-size: 2em;
+  padding: .2em;
+  margin-top: 20px;
+}
+
+
+.fondo{
+background: #000000; /* Old browsers */
+background: -moz-linear-gradient(top,  #000000 0%, #3c0a3b 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#000000), color-stop(100%,#3c0a3b)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #000000 0%,#3c0a3b 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #000000 0%,#3c0a3b 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #000000 0%,#3c0a3b 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #000000 0%,#3c0a3b 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#3c0a3b',GradientType=0 ); /* IE6-9 */
+}
+
+#login,.registro{
+  font-family: 'rawengulklight', sans-serif;
+  font-weight: bold;
+  color:#fff;
+  background: #ff2700; /* Old browsers */
+  background: -moz-linear-gradient(top,  #ff2700 0%, #ff5e07 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff2700), color-stop(100%,#ff5e07)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #ff2700 0%,#ff5e07 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #ff2700 0%,#ff5e07 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #ff2700 0%,#ff5e07 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #ff2700 0%,#ff5e07 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff2700', endColorstr='#ff5e07',GradientType=0 ); /* IE6-9 */
+  border-radius: 5px;
+  padding: .1em;
+  text-align: center;
+  font-size: 3em;
+  
+}
+
+img[alt="logo"]{
+  margin-top: 5px;
+  max-height: 200px
+}
+
+#puteapp{
+  font-family: 'rawengulkbold', sans-serif;
+  color:white;
+  text-align: center;
+  font-size: 2.3em;
+}
+
+hr{
+  border:1px solid white;
+  margin-top: 40px;
+}
+
+#h1-ingreso{
+  color: #909090;
+  font-size: 2.8em;
+  text-align: center;
+  font-family: 'rawengulkbold', sans-serif;
+
+}
+
+#problema,#puteada_mostrar{
+  color: gray;
+  border: 1px solid #909090;
+  border-radius: 5px; 
+  min-height: 150px;
+  font-size:1.5em;
+  padding: 0
+}
+
+#usuario, #pass{
+  border-radius: 5px;
+  border: 1px solid white;
+  padding-left: 20px;
+  color: white;
+  box-sizing:border-box;
+}
+
+#usuario::-webkit-input-placeholder::before { font-family: fontAwesome; content:'\f003  '; color: #fff }
+#usuario::-moz-placeholder::before  { font-family: fontAwesome; content:'\f003  '; color: #fff } /* firefox 19+ */
+#usuario:-ms-input-placeholder::before  { font-family: fontAwesome; content:'\f003  '; color: #fff } /* ie */
+#usuario input:-moz-placeholder::before  { font-family: fontAwesome; content:'\f003  '; color: #fff }
+
+#pass::-webkit-input-placeholder::before { font-family: fontAwesome; content:'\f084  '; color: #fff }
+#pass::-moz-placeholder::before  { font-family: fontAwesome; content:'\f084  '; color: #fff } /* firefox 19+ */
+#pass:-ms-input-placeholder::before  { font-family: fontAwesome; content:'\f084 '; color: #fff } /* ie */
+#pass input:-moz-placeholder::before  { font-family: fontAwesome; content:'\f084  '; color: #fff }
+
+#email::-webkit-input-placeholder::after {content:'ejemplo@abc.com'; color: #999; float:right; padding-right: 10px;}
+#email::-moz-placeholder::after  {content:'ejemplo@abc.com'; color: #999; float:right; padding-right: 10px;} /* firefox 19+ */
+#email:-ms-input-placeholder::after  {content:'ejemplo@abc.com'; color: #999; float:right; padding-right: 10px;} /* ie */
+#email input:-moz-placeholder::after  {content:'ejemplo@abc.com'; color: #999; float:right; padding-right: 10px;}
+
+#pass2::-webkit-input-placeholder::after {content:'al menos 6 letras'; color: #999; float:right; padding-right: 10px;}
+#pass2::-moz-placeholder::after  {content:'al menos 6 letras'; color: #999; float:right; padding-right: 10px;} /* firefox 19+ */
+#pass2:-ms-input-placeholder::after  {content:'al menos 6 letras'; color: #999; float:right; padding-right: 10px;} /* ie */
+#pass2 input:-moz-placeholder::after  {content:'al menos 6 letras'; color: #999; float:right; padding-right: 10px;}
+
+#nombre, #apellido, #mail, #dni, #domicilio{
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding-left: 20px;
+  font-family: 'rawengulkbold', sans-serif;
+  box-sizing:border-box;
+}
+
+.negro{
+  border: 1px solid #999;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.registro{
+  margin-top: 10px;
+background: #9c039a; /* Old browsers */
+background: -moz-linear-gradient(top,  #9c039a 0%, #ff091e 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#9c039a), color-stop(100%,#ff091e)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #9c039a 0%,#ff091e 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #9c039a 0%,#ff091e 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #9c039a 0%,#ff091e 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #9c039a 0%,#ff091e 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9c039a', endColorstr='#ff091e',GradientType=0 ); /* IE6-9 */
+padding: 0;
+}
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+  #voz{
+    display: none;
+  }
