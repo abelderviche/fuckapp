@@ -4184,10 +4184,12 @@ main {
   background: green;
   display:block;
   margin: 0 auto;
+  margin-top: 1em;
+  cursor: pointer;
 }
 .microfono{
   outline:0;
-background: transparent;
+  background: transparent;
   border:none;
   margin-top:10px;
 }
@@ -4249,7 +4251,6 @@ background: transparent;
 }
 a[atributoX]{
   text-align: center;
-  margin-top: 1em;
   background:#D75527;
   line-height: 3.5;
 }
