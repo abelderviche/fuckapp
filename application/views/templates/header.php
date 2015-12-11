@@ -18,8 +18,8 @@
           <nav class="menu">
             <figure><img src="<?php echo asset_url(); ?>/img/logo.svg" alt=""/></figure>
             <ul>
-              <li> <a href="#grabar">GRABAR</a></li>
-              <li> <a href="#manual">AYUDA</a></li>
+              <li> <a href="<?=base_url();?>">GRABAR</a></li>
+              <li> <a href="<?=base_url();?>ayuda">AYUDA</a></li>
               <li> <a href="#">TERMINOS Y CONDICIONES</a></li>
               <li> <a href="#login">CREDITOS</a></li>
             </ul>

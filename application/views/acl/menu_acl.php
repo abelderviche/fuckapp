@@ -19,21 +19,6 @@
             <li <?php echo ($this->router->fetch_class() === 'acl_permisos' ) ? ' class="active"' : ''; ?>><a href="/acl/acl_permisos/listar">Permisos</a></li>
             <li <?php echo ($this->router->fetch_class() === 'acl_grupos' ) ? ' class="active"' : ''; ?>><a href="/acl/acl_grupos/listar">Grupos</a></li>
             <li <?php echo ($this->router->fetch_class() === 'acl_usuarios' ) ? ' class="active"' : ''; ?>><a href="/acl/acl_usuarios/listar">Usuarios</a></li>
-
-<!--            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    Ex #1 <b class="caret"></b>
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Acción #1</a></li>
-                    <li><a href="#">Acción #2</a></li>
-                    <li><a href="#">Acción #3</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Acción #4</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Acción #5</a></li>
-                </ul>
-            </li>-->
         </ul>
 
         <ul class="nav navbar-nav navbar-right">

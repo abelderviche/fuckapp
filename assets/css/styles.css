@@ -4239,7 +4239,14 @@ main {
 #container-m{
   background:#e0e0e0;
   margin-top: 38px;
-  max-width: 500px;
+ }
+#container-m1{
+  background:#e0e0e0;
+  margin-top: 0.5em;
+  max-width: 310px;
+  padding: 1em;
+  width: 80%;
+
 }
 #grabado{
   position:fixed;
@@ -4302,4 +4309,16 @@ a[atributoX]{
 .alertas .ed-container .ed-item.insulto{
    background: #ce2027;
 }
-
+.responsive-img{
+  max-height: 150px;
+}
+.ayuda{
+  height: 100vh !important;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}
+.ayuda img{
+  max-height: 100% !important;
+  width: auto !important;
+}

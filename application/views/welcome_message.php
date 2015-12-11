@@ -80,7 +80,7 @@
 						<img class="responsive-img" src="<?php echo asset_url(); ?>/img/onda.png" alt="" style="margin-bottom:10px;">
 					</div>
 				</div>
-				<div class="ed-container abcenter" id="container-m">
+				<div class="ed-container abcenter" id="container-m1">
 					<div class="carta" style="display:none;" id="puteada_mostrar"></div>
 				</div>
 				<input type="submit" value="SIGUIENTE" id="siguiente" atributoX>

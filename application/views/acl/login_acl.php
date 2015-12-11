@@ -7,7 +7,7 @@
     </script>
 <?php endif; ?>
 <div class="row">
-<form class="form-signin s12" role="form" action="<?=base_url();?>/acl/acl_login/login" method="POST">
+<form class="form-signin s12" role="form" action="<?=base_url();?>acl/acl_login/login" method="POST">
             <h2>Ingrese los datos</h2>
             <div class="divider" style="margin-bottom:20px;"></div>
         <div class="input-field col s12 m6 offset-m2">

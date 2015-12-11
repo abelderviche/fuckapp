@@ -32,6 +32,15 @@ class Welcome extends MY_Controller {
         $dataLayout = array();
         $dataLayout["contenido"] = $this->load->view("manual",$data,TRUE);
         $this->load->view("layout/default", $dataLayout);
+    } 
+
+    public function ayuda(){
+        $data = array();
+        
+        $data["page_id"] = "ayuda";
+        $dataLayout = array();
+        $dataLayout["contenido"] = $this->load->view("carta_ayuda",$data,TRUE);
+        $this->load->view("layout/default", $dataLayout);
     }    
 
     public function manual_post(){
