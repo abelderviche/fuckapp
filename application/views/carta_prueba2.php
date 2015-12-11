@@ -1,5 +1,5 @@
-<div id="container" class="container" style="background:#e0e0e0;font-size:14px;margin-top:5px;">
-  <div class="row" >
+<div id="container" class="ed-container" style="background:#e0e0e0;font-size:14px;margin-top:35px;">
+  <div class="ed-item" >
     <div class="col s12 " style="text-align:right;font-size:14px;font-weight:bold;"><?=date("d/m/Y")?></div>
     <div class="col s12" style="font-size:14px;font-size:14px;font-weight:bold;">Sres. <?=ucfirst($datos["empresa"]);?> S.A.</div>
       <div class="col s12 " style="text-align:justify;font-size:14px; ">
