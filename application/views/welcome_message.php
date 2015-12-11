@@ -112,11 +112,8 @@
           </div>
         </article>
         
-
-<?php /*
-
-<div class="red center" style="font-size:15px;color:white;">
-	<?php 
+	
+	<?php /*
 		if(isset($_GET['error'])){
 			$error_obtenido = $_GET['error'];
 			if($error_obtenido == "palabra"){ 
@@ -124,10 +121,11 @@
 			} else{
 				echo "No se ha detectado ninguna empresa, volv&eacute; a intentar!";
 			}
-		}
+		}*/
 	?>
-</div>
 
+
+<?php /*
 <div id="container" class="container center">
 
 <div class="row">

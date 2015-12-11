@@ -4181,11 +4181,13 @@ main {
   border: none;
   color: white;
   line-height: 4;
-  background: green;
+  background:#D75527;
   display:block;
   margin: 0 auto;
   margin-top: 1em;
   cursor: pointer;
+  font-family: 'heroregular', 'san-serif';
+  font-size: 1em;
 }
 .microfono{
   outline:0;
@@ -4251,6 +4253,53 @@ main {
 }
 a[atributoX]{
   text-align: center;
-  background:#D75527;
+  background:transparent;
+  border:1px solid white;
   line-height: 3.5;
 }
+
+.alertas{
+  position:fixed;
+  width:100vw;
+  height:100vh;
+  background: rgba(0,0,0,.8);
+  top:0;
+  left:0;
+  z-index: 9999999999999999999;
+}
+.alertas .ed-container{
+ width:100%;
+ height: 100%;
+ display: flex;
+ align-items:center;
+ justify-content:center;
+}
+.alertas .ed-container .ed-item{
+  border-radius: 15px;
+  overflow:hidden;
+  width:80%;
+  max-width: 500px;
+}
+.alertas .ed-container .ed-item button{
+  width:100%;
+  margin:0;
+  background: rgba(0,0,0,.2);
+  border:none;
+  color:white;
+  font-size: 1.5em;
+}
+.alertas .ed-container .ed-item p{
+  color:white;
+  margin:0;
+  font-size: 1.2em;
+}
+.alertas .ed-container .ed-item figure{
+  margin:0;
+}
+.alertas .ed-container .ed-item.empresa{
+   background: #f5911d;
+}
+.alertas .ed-container .ed-item.insulto{
+   background: #ce2027;
+}
+
