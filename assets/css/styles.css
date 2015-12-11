@@ -4198,3 +4198,41 @@ background: transparent;
 .microfono:hover{
   background: transparent;
 }
+.fecha{
+  text-align: right; 
+  font-weight: bold;
+  margin-top: 1em; 
+  font-size: .9em;
+}
+.namEmpresa{
+  font-weight: bold;
+  font-size: 1.1em;
+}
+.carta{
+  font-size: 1em;
+  text-align: justify;
+}
+.usuario{
+  margin: 1em 0;
+  font-weight: bold;
+  font-size: 1em;
+  padding-bottom: 1em;
+  border-bottom:1px solid white;
+}
+.circle{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #3a5795;
+  display: inline-block;
+  color:white;
+  font-size: 1.3em;
+  margin: .5em .2em;
+}
+.circle:first-child{
+  background-color: #55acee;
+}
+[class^="circle icon-"]:before, 
+[class*="circle icon-"]:before{
+  top:.35em;
+}
