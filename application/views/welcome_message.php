@@ -54,6 +54,14 @@
           </div>
         </article>
         <article id="grabado">
+          <div class="ed-container abcenter main">
+            <div class="ed-item">
+              <figure alt="logo"><img src="<?php echo asset_url(); ?>/img/logo.svg" alt=""/></figure>
+            </div>
+            <div class="ed-item">
+              <figure><img id="pasos" src="<?php echo asset_url(); ?>/img/pasos1.svg" alt=""/></figure>
+            </div>
+          </div>
 			<form id="form" method="POST" action="<?=base_url();?>manual_post">
 				<!-- texto hablado por mic * OCULTO * -->
 				<div id="results" class="none">
@@ -67,9 +75,9 @@
 					&nbsp;&nbsp;
 					<select id="select_dialect"></select>
 				</div>
-				<div  class="none">
-					<div class="col s8 offset-s2" id="voz">
-						<img class="responsive-img" src="<?php echo asset_url(); ?>/img/onda.jpg" alt="" style="margin-bottom:10px;">
+				<div  class="ed-container abcenter">
+					<div class="ed-item" id="voz">
+						<img class="responsive-img" src="<?php echo asset_url(); ?>/img/onda.png" alt="" style="margin-bottom:10px;">
 					</div>
 					<div class="col s12 m6 offset-m3">
 						

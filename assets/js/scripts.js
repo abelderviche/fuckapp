@@ -221,7 +221,8 @@ $(function(){
 		    }
 		    //start_img.src =  dominio + 'img/mic2.png';
 		    test_input.value = final_span.innerHTML;
-		    $('#puteada_mostrar').html(test_input.value)
+		    $("#grabado").show();
+		    $('#puteada_mostrar').html(test_input.value);
 		    if(test_input.value == ''){
 		      showInfo('info_no_speech');
 		    }else{
