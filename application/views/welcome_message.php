@@ -79,14 +79,17 @@
 					<div class="ed-item" id="voz">
 						<img class="responsive-img" src="<?php echo asset_url(); ?>/img/onda.png" alt="" style="margin-bottom:10px;">
 					</div>
-					<div class="col s12 m6 offset-m3">
-						
-					<div style="text-align:left;min-height: 100px; margin-bottom:10px;display:none;" id="puteada_mostrar"></div>
-					</div>
+				</div>
+				<div class="ed-container abcenter" id="container-m">
+					<div class="carta" style="display:none;" id="puteada_mostrar"></div>
 				</div>
 				<input type="submit" value="SIGUIENTE" id="siguiente" atributoX>
-				
 			</form>
+			<div class="ed-container">
+				<div class="ed-item">
+					<a href="javascript:window.location.reload();" atributoX>VOLVER A GRABAR</a>
+				</div>	
+			</div>
         </article>
         <article id="manual">
           <div class="ed-container abcenter main">

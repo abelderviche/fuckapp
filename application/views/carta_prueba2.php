@@ -13,7 +13,7 @@
     <figure><img id="pasos" src="<?php echo asset_url(); ?>/img/pasos3.svg" alt=""/></figure>
   </div>
 </div>
-<div id="container" class="ed-container" style="background:#e0e0e0;font-size:14px;margin-top:38px;">
+<div id="container-m" class="ed-container" style="background:#e0e0e0;font-size:14px;margin-top:38px;">
   <div class="ed-item" >
     <div class="fecha"><?=date("d/m/Y")?></div>
     <div class="namEmpresa">Sres. <?=ucfirst($datos["empresa"]);?> S.A.</div>

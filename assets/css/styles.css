@@ -4181,7 +4181,7 @@ main {
   border: none;
   color: white;
   line-height: 4;
-  background: #D75527;
+  background: green;
   display:block;
   margin: 0 auto;
 }
@@ -4232,7 +4232,11 @@ background: transparent;
 [class*="circle icon-"]:before{
   top:.35em;
 }
-
+#container-m{
+  background:#e0e0e0;
+  margin-top: 38px;
+  max-width: 500px;
+}
 #grabado{
   position:fixed;
   width:100vw;
@@ -4242,4 +4246,10 @@ background: transparent;
   left:0;
   display:none;
 
+}
+a[atributoX]{
+  text-align: center;
+  margin-top: 1em;
+  background:#D75527;
+  line-height: 3.5;
 }
