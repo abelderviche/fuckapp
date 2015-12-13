@@ -71,7 +71,7 @@ $(function(){
 	});
 	$btnMensaje.on('click',function(){
 		$(this).animate({
-			'min-height':'250px'
+			'min-height':'200px'
 		},1000);
 	});
 	$btnMensaje.next().on('click',function(){

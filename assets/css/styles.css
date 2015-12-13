@@ -3904,6 +3904,8 @@ main {
   width: 118px;
   height: 118px;
   background: url(../img/user-born.png) no-repeat, white;
+  -webkit-background-size: contain;
+  background-size: contain;
   border-radius: 50%;
   overflow: hidden;
   margin: 1.3em auto;
@@ -3934,7 +3936,7 @@ main {
 }
 
 #grabar figure[alt="micro"] {
-  margin: 0.2em auto 2em auto;
+  margin: 0 auto 1em auto;
   cursor: pointer;
   max-width: 150px;
 }
@@ -3952,11 +3954,14 @@ main {
   #grabar p {
     width: 50%;
   }
+  #grabar figure[alt="micro"] {
+    margin: 0.2em auto 2em auto;
+  }
 }
 
 #grabar button#btnManual {
   max-width: 475px;
-  margin-top: 2rem;
+  margin-top: .2rem;
   width: 85%;
   border-radius: 50px;
   border: 1px solid white;
@@ -4017,6 +4022,9 @@ main {
     background: url("../img/furia.png") no-repeat;
     background-position: center bottom;
   }
+  #grabar button#btnManual {
+    margin-top: 2rem;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -4051,6 +4059,8 @@ main {
 }
 #login a.facebook{
   display: block;
+  line-height: 3.5;
+  margin-bottom: 1em;
 }
 
 #login .hastaFondo,
@@ -4059,9 +4069,19 @@ main {
   position: relative;
   background: #56595A;
   width: 100vw;
-  height: 30px;
+  height: 40px;
 }
-
+@media screen and (min-width: 480px) {
+  #login .hastaFondo,
+  #login2 .hastaFondo {
+    height: 30px;
+  }
+  #login a.facebook{
+    display: block;
+    line-height: 4;
+    margin-bottom: 2em;
+  }
+}
 #login .hastaFondo a,
 #login2 .hastaFondo a {
   color: white;
@@ -4071,6 +4091,13 @@ main {
 #login2 form {
   max-width: 480px;
   margin: auto;
+}
+#login2 form{
+  display: flex;  
+  flex-direction:column;
+  justify-content:space-around;
+  align-items:center;
+  min-height: 60vh;
 }
 
 #login form input,
@@ -4084,7 +4111,16 @@ main {
   margin-bottom: 2em;
   text-align: center;
 }
-
+#login2 form input{
+  margin-bottom: 1em;
+  line-height: 3;
+}
+@media screen and (min-width: 480px){
+  #login2 form input {
+    line-height: 4;
+    margin-bottom: 2em;
+  }
+}
 #login form input[placeholder="Nombre"],
 #login2 form input[placeholder="Nombre"],
 #login2 form input[placeholder="Apellido"] {
