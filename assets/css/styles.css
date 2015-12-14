@@ -4026,7 +4026,18 @@ main {
     margin-top: 2rem;
   }
 }
-
+@media (min-width: 480px) and (orientation: landscape) {
+    figure[alt='logo'],
+    figure #pasos{
+      display: none;
+    }
+    #grabar figure[alt="micro"]{
+      margin-top: 3em;
+    }
+    #grabar p{
+      width: 100%;
+    }
+  }
 @media screen and (min-width: 1024px) {
   #login,
   #login2 {
@@ -4206,6 +4217,16 @@ main {
     background-position: 2% 50%;
   }
 }
+@media (min-width: 480px) and (orientation: landscape) {
+    #login2 form{
+      max-width: 100%;
+      margin: 0;
+      flex-flow:row wrap;
+    }
+    #login2 form input{
+      width: 45%;
+    }
+  }
 .none{
   display: none;
 }

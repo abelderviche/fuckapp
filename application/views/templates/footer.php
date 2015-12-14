@@ -11,24 +11,8 @@
 			<?php if($_GET['error'] && $_GET['error'] == 'palabra'){ ?>
 
 					/*script para mostrar NO SE ENCONTRO INSULTO */
-					var template = '<article class="alertas">'+
-		        	'<div class="ed-container abcenter no-padding">'+
-		        		'<div class="ed-item empresa">'+
-		        			'<figure>'+
-		        				'<img src="<?php echo asset_url(); ?>/img/insulto.png" alt="empresa">'+
-		        			'</figure>'+
-		        			'<p>No se detectó ninguna empresa.</p>'+
-		    				'<p><b>Volvé a intentarlo de forma fuerte y clara.</b></p>'+
-		    				'<button onClick="javascript:window.location.href=\'<?=base_url();?>\';">OK</button>'+
-		        		'</div>'+
-		        	'</div>'+
-		        '</article>';
-		        $("body").append($(template));
-
-				<?php }elseif($_GET['error']){ ?>
-
-					/*script para mostrar no se detectro empresa */
-					var template = '<article class="alertas">'+
+					
+		        var template = '<article class="alertas">'+
 		        	'<div class="ed-container abcenter no-padding">'+
 		        		'<div class="ed-item insulto">'+
 		        			'<figure>'+
@@ -40,6 +24,23 @@
 		        		'</div>'+
 		        	'</div>'+
 		        '</article>';
+		        $("body").append($(template));
+
+				<?php }elseif($_GET['error']){ ?>
+
+					/*script para mostrar no se detectro empresa */
+				var template = '<article class="alertas">'+
+		        	'<div class="ed-container abcenter no-padding">'+
+		        		'<div class="ed-item empresa">'+
+		        			'<figure>'+
+		        				'<img src="<?php echo asset_url(); ?>/img/insulto.png" alt="empresa">'+
+		        			'</figure>'+
+		        			'<p>No se detectó ninguna empresa.</p>'+
+		    				'<p><b>Volvé a intentarlo de forma fuerte y clara.</b></p>'+
+		    				'<button onClick="javascript:window.location.href=\'<?=base_url();?>\';">OK</button>'+
+		        		'</div>'+
+		        	'</div>'+
+		        '</article>';	
 		        $("body").append($(template));
 
 				<?php } ?>
