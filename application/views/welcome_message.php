@@ -86,7 +86,7 @@
 				<input type="submit" value="SIGUIENTE" id="siguiente" atributoX>
 			</form>
 			<div class="ed-container">
-				<div class="ed-item">
+				<div class="ed-item no-padding">
 					<a href="javascript:window.location.reload();" atributoX>VOLVER A GRABAR</a>
 				</div>	
 			</div>

@@ -1,28 +1,28 @@
-<article id="login">
-          <div class="ed-container abcenter main">
-            <div class="ed-item">
-              <figure alt="logo"><img src="<?php echo asset_url(); ?>/img/logo.svg" alt=""/></figure>
-            </div>
-            <div class="ed-item">
-              <figure><img id="pasos" src="<?php echo asset_url(); ?>/img/pasos2.svg" alt=""/></figure>
-            </div>
-          </div>
-          <div class="ed-container abcenter">
-            <div class="ed-item">
-              <a  class='facebook' href='<?=$login_url;?>'><span class="icon-facebook espacio"> </span>Login con facebook</a>
-               <form method="POST" name="usuario_login" action="<?=base_url();?>usuario_login">
-                <input type="email" name="email" id="usuario" placeholder="Email"/>
-                <input type="password" placeholder="Password" name="contrasenia" id="pass"/>
-                <input type="submit" name="entrar" value="Login"/>
-              </form>
-            </div>
-          </div>
-          <div class="ed-container abcenter justify hastaFondo full">
-            <div class="ed-item base-50"><a href='<?=base_url();?>paso2_registro'>Crear una cuenta</a></div>
-            <div class="ed-item base-50"><a href="terminos.html">Términos y condiciones</a></div>
-          </div>
-        </article>
-      </section>
+  <article id="login">
+    <div class="ed-container abcenter main">
+      <div class="ed-item">
+        <figure alt="logo"><img src="<?php echo asset_url(); ?>/img/logo.svg" alt=""/></figure>
+      </div>
+      <div class="ed-item">
+        <figure><img id="pasos" src="<?php echo asset_url(); ?>/img/pasos2.svg" alt=""/></figure>
+      </div>
+    </div>
+    <div class="ed-container abcenter">
+      <div class="ed-item">
+       <form method="POST" name="usuario_login" action="<?=base_url();?>usuario_login">
+        <a  class='facebook' href='<?=$login_url;?>'><span class="icon-facebook espacio"> </span>Login con facebook</a>
+        <input type="email" name="email" id="usuario" placeholder="Email"/>
+        <input type="password" placeholder="Password" name="contrasenia" id="pass"/>
+        <input type="submit" name="entrar" value="Login"/>
+      </form>
+      </div>
+    </div>
+    <div class="ed-container abcenter justify hastaFondo full">
+      <div class="ed-item base-50"><a href='<?=base_url();?>paso2_registro'>Crear una cuenta</a></div>
+      <div class="ed-item base-50"><a href="terminos.html">Términos y condiciones</a></div>
+    </div>
+  </article>
+</section>
 
 
 <?php /*

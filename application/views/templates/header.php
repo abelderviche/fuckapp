@@ -20,8 +20,8 @@
             <ul>
               <li> <a href="<?=base_url();?>">GRABAR</a></li>
               <li> <a href="<?=base_url();?>ayuda">AYUDA</a></li>
-              <li> <a href="#">TERMINOS Y CONDICIONES</a></li>
-              <li> <a href="#login">CREDITOS</a></li>
+              <li> <a href="<?=base_url();?>terminos">TERMINOS Y CONDICIONES</a></li>
+              <li> <a href="<?=base_url();?>creditos">CREDITOS</a></li>
             </ul>
           </nav>
         </div>

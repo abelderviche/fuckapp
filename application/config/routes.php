@@ -52,6 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'welcome';
 $route['manual'] = 'welcome/manual';
 $route['ayuda'] = 'welcome/ayuda';
+$route['terminos'] = 'welcome/terminos';
 $route['manual_post'] = 'welcome/manual_post';
 $route['paso2'] = 'welcome/paso2';
 $route['paso2_registro'] = 'welcome/paso2_registro';
